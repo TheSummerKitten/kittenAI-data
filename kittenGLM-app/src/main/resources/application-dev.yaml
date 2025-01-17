@@ -30,3 +30,21 @@ logging:
   level:
     root: info
   config: classpath:logback-spring.xml
+
+# chatGLM-Config
+chatglm:
+  sdk:
+    config:
+      enable: true
+      api-host: https://open.bigmodel.cn/
+      api-secret-key: edb37ef90776015a5b2e3a30c9d7d55a.LTHwEc97IB2luU9l
+# 线程池配置
+thread:
+  pool:
+    executor:
+      config:
+        block-queue-size: 100
+        core-pool-size: 20
+        max-pool-size: 50
+        keep-alive-time: 5000
+        policy: CallerRunsPolicy
