@@ -11,6 +11,7 @@ public enum ChatGLMModel {
     CHATGLM_LITE_32K("chatglm_lite_32k"),
     CHATGLM_STD("chatglm_std"),
     CHATGLM_PRO("chatglm_pro"),
+    GLM_4("glm-4"),
     ;
     private final String code;
 

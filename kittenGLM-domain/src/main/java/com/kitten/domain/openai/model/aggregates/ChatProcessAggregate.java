@@ -16,6 +16,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ChatProcessAggregate {
+    /** 验证信息 */
+    private String token;
     /** 用户ID */
     private String openid;
     /** 默认模型 */
