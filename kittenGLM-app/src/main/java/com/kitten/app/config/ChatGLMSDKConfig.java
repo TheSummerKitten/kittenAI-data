@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class ChatGLMSDKConfig {
 
     @Bean(name = "chatGLMOpenAiSession")
-    @ConditionalOnProperty(value = "chatglm.sdk.config.enabled", havingValue = "true", matchIfMissing = false)
+    @ConditionalOnProperty(value = "chatglm.sdk.config.enable", havingValue = "true", matchIfMissing = false)
     public OpenAiSession openAiSession(ChatGLMSDKConfigProperties properties) {
         com.kitten.chatglmsdk.session.Configuration configuration = new com.kitten.chatglmsdk.session.Configuration();
         configuration.setApiHost(properties.getApiHost());

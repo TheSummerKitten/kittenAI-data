@@ -27,8 +27,9 @@ public enum ChatGLMModel {
                 return ChatGLMModel.CHATGLM_STD;
             case "chatglm_pro":
                 return ChatGLMModel.CHATGLM_PRO;
+            case "glm-4":
             default:
-                return ChatGLMModel.CHATGLM_6B_SSE;
+                return ChatGLMModel.GLM_4;
         }
     }
 

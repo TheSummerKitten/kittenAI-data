@@ -16,7 +16,7 @@ import java.util.List;
 public class ChatGLMRequestDTO {
     // 模型选择参数
     private String model = ChatGLMModel.GLM_4.getCode();
-    // 对话内容
+    // 对话内容: 用户角色, 提示符
     private List<MessageEntity> messages;
 
 }

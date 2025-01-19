@@ -19,7 +19,6 @@
 
     <dependencies>
 
-
         <!--  微服务模块  -->
         <dependency>
             <groupId>com.kitten</groupId>
@@ -31,6 +30,7 @@
             <artifactId>kittenGLM-domain</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
     <build>
         <finalName>kittenGLM-trigger</finalName>

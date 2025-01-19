@@ -15,18 +15,16 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
-@CrossOrigin("${app.config.cross-origin")
 @RequestMapping("/api/${app.config.api-version}/chatgpt/")
 public class ChatGLMAIServiceController {
     @Resource
     private IChatService chatService;
 
-    @PostMapping("/chat/completions")
+    @PostMapping("completions")
     public ResponseBodyEmitter completionsStream(
             @RequestBody ChatGLMRequestDTO request,
             @RequestHeader("Authorization") String token,
-            HttpServletResponse response)
-    {
+            HttpServletResponse response) throws Exception {
         log.info("流式问答请求开始, 使用模型: {} | 提示符: {}", request.getModel(), JSON.toJSONString(request.getMessages()) );
         log.info("用户token: {}", token);
         //1. 基础配置
@@ -40,12 +38,16 @@ public class ChatGLMAIServiceController {
                 .messages(request.getMessages().stream().map(entity -> MessageEntity.builder()
                         .role(entity.getRole())
                         .content(entity.getContent())
-                        .name(entity.getName())
                         .build())
                         .collect(Collectors.toList()))
                 .build();
         //3. 返回
         return chatService.completions(chatProcessAggregate);
+    }
+
+    @PostMapping("test")
+    public String test(@RequestParam String params) {
+        return "success test" + params;
     }
 
 }

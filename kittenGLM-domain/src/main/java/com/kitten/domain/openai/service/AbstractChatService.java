@@ -24,16 +24,14 @@ import java.util.Map;
 @Slf4j
 public abstract class AbstractChatService implements IChatService {
 
-    @Resource
-    private OpenAiSession openAiSession;
 
     @Override
-    public ResponseBodyEmitter completions(ChatProcessAggregate chatProcess) {
-
+    public ResponseBodyEmitter completions(ChatProcessAggregate chatProcess) throws Exception {
         // 1. 权限校验
         if (!"kitten".equals(chatProcess.getToken())) {
             throw new ChatGPTException(Constants.ResponseCode.TOKEN_ERROR.getCode(), Constants.ResponseCode.TOKEN_ERROR.getInfo());
         }
+        log.info("校验通过");
         // 2. 请求应答
         ResponseBodyEmitter emitter = new ResponseBodyEmitter(3 * 60 * 1000L);
         emitter.onCompletion(() -> {
@@ -42,16 +40,13 @@ public abstract class AbstractChatService implements IChatService {
         emitter.onError(throwable -> log.error("流式问答请求疫情，使用模型：{}", chatProcess.getModel(), throwable));
 
         // 3. 应答处理
-        try {
-            this.doMessageResponse(chatProcess, emitter);
-        } catch (Exception e) {
-            throw new ChatGPTException(Constants.ResponseCode.UN_ERROR.getCode(), Constants.ResponseCode.UN_ERROR.getInfo());
-        }
+        log.info("开始处理请求");
+        this.doMessageResponse(chatProcess, emitter);
+
         // 4. 返回结果
         return emitter;
-
     }
 
-    protected abstract void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter responseBodyEmitter) throws JsonProcessingException;
+    protected abstract void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter responseBodyEmitter) throws Exception;
 
 }
