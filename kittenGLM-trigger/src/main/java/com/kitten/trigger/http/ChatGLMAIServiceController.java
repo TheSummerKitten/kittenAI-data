@@ -1,6 +1,7 @@
 package com.kitten.trigger.http;
 
 import com.alibaba.fastjson.JSON;
+import com.kitten.dataTypes.common.Constants;
 import com.kitten.domain.openai.model.aggregates.ChatProcessAggregate;
 import com.kitten.domain.openai.model.entity.MessageEntity;
 import com.kitten.domain.openai.service.IChatService;
@@ -11,10 +12,12 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/${app.config.api-version}/chatgpt/")
 public class ChatGLMAIServiceController {
     @Resource
@@ -31,6 +34,21 @@ public class ChatGLMAIServiceController {
         response.setContentType("text/event-stream");
         response.setCharacterEncoding("UTF-8");
         response.setHeader("Cache-Control", "no-cache");
+        //2. 构建异步响应对象
+        ResponseBodyEmitter emitter = new ResponseBodyEmitter(3 * 60 * 1000L);
+        //3. 鉴权
+//        boolean success = authService.checkToken(token);
+        if (!token.equals("kitten")) { // !success
+            try {
+                emitter.send(Constants.ResponseCode.TOKEN_ERROR.getCode());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            emitter.complete();
+            return emitter;
+        }
+
+
         //2. 构建参数
         ChatProcessAggregate chatProcessAggregate = ChatProcessAggregate.builder()
                 .token(token)
@@ -42,7 +60,7 @@ public class ChatGLMAIServiceController {
                         .collect(Collectors.toList()))
                 .build();
         //3. 返回
-        return chatService.completions(chatProcessAggregate);
+        return chatService.completions(emitter, chatProcessAggregate);
     }
 
     @PostMapping("test")
