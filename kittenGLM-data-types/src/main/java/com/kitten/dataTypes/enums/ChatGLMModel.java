@@ -12,6 +12,7 @@ public enum ChatGLMModel {
     CHATGLM_STD("chatglm_std"),
     CHATGLM_PRO("chatglm_pro"),
     GLM_4("glm-4"),
+    GLM_4_FLASH("glm-4-flash"),
     ;
     private final String code;
 
@@ -28,8 +29,10 @@ public enum ChatGLMModel {
             case "chatglm_pro":
                 return ChatGLMModel.CHATGLM_PRO;
             case "glm-4":
-            default:
                 return ChatGLMModel.GLM_4;
+            case "glm-4-flash":
+            default:
+                return ChatGLMModel.GLM_4_FLASH;
         }
     }
 

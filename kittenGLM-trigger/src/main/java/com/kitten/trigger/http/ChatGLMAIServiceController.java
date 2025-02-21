@@ -6,6 +6,7 @@ import com.kitten.domain.openai.model.aggregates.ChatProcessAggregate;
 import com.kitten.domain.openai.model.entity.MessageEntity;
 import com.kitten.domain.openai.service.IChatService;
 import com.kitten.trigger.http.dto.ChatGLMRequestDTO;
+import com.kitten.trigger.http.dto.loginRspVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
@@ -17,7 +18,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "${app.config.cross-origin}")
 @RequestMapping("/api/${app.config.api-version}/chatgpt/")
 public class ChatGLMAIServiceController {
     @Resource
@@ -38,6 +39,7 @@ public class ChatGLMAIServiceController {
         ResponseBodyEmitter emitter = new ResponseBodyEmitter(3 * 60 * 1000L);
         //3. 鉴权
 //        boolean success = authService.checkToken(token);
+
         if (!token.equals("kitten")) { // !success
             try {
                 emitter.send(Constants.ResponseCode.TOKEN_ERROR.getCode());
@@ -47,8 +49,6 @@ public class ChatGLMAIServiceController {
             emitter.complete();
             return emitter;
         }
-
-
         //2. 构建参数
         ChatProcessAggregate chatProcessAggregate = ChatProcessAggregate.builder()
                 .token(token)
@@ -66,6 +66,13 @@ public class ChatGLMAIServiceController {
     @PostMapping("test")
     public String test(@RequestParam String params) {
         return "success test" + params;
+    }
+
+
+    @PostMapping("/api/v1/auth/login")
+    public loginRspVO login(@RequestParam(value = "code") String code){
+        System.out.println(code);
+        return new loginRspVO("0000", "kitten");
     }
 
 }
