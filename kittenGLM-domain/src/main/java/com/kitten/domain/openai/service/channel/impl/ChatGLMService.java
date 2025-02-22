@@ -41,33 +41,31 @@ public class ChatGLMService implements OpenAiGroupService {
         ChatCompletionRequest request = new ChatCompletionRequest();
         request.setModel(Model.valueOf(ChatGLMModel.get(chatProcess.getModel()).name())); // chatGLM_6b_SSE、chatglm_lite、chatglm_lite_32k、chatglm_std、chatglm_pro
         request.setPrompt(prompts);
+        request.setStream(true);
 
         chatGlMOpenAiSession.completions(request, new EventSourceListener() {
             @Override
             public void onEvent(EventSource eventSource, @Nullable String id, @Nullable String type, String data) {
                 ChatCompletionResponse response = JSON.parseObject(data, ChatCompletionResponse.class);
-
                 // 发送信息
                 if (EventType.add.getCode().equals(type)){
                     try {
+                        log.info("[输出消息增量:] {}", response.getData());
                         emitter.send(response.getData());
                     } catch (Exception e) {
                         throw new ChatGPTException(e.getMessage());
                     }
                 }
-
                 // type 消息类型，add 增量，finish 结束，error 错误，interrupted 中断
                 if (EventType.finish.getCode().equals(type)) {
                     ChatCompletionResponse.Meta meta = JSON.parseObject(response.getMeta(), ChatCompletionResponse.Meta.class);
                     log.info("[输出结束] Tokens {}", JSON.toJSONString(meta));
                 }
             }
-
             @Override
             public void onClosed(EventSource eventSource) {
                 emitter.complete();
             }
-
         });
 
     }

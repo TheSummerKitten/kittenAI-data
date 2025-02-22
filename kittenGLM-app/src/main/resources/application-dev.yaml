@@ -48,3 +48,9 @@ thread:
         max-pool-size: 50
         keep-alive-time: 5000
         policy: CallerRunsPolicy
+
+wx:
+  config:
+    originalid: gh_0e28293f0408
+    appid: wx54cfcf6cc5fca984
+    token: kitten
