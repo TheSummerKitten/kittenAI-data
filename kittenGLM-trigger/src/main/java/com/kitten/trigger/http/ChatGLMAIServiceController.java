@@ -2,6 +2,7 @@ package com.kitten.trigger.http;
 
 import com.alibaba.fastjson.JSON;
 import com.kitten.dataTypes.common.Constants;
+import com.kitten.domain.auth.service.IAuthService;
 import com.kitten.domain.openai.model.aggregates.ChatProcessAggregate;
 import com.kitten.domain.openai.model.entity.MessageEntity;
 import com.kitten.domain.openai.service.IChatService;
@@ -24,6 +25,9 @@ public class ChatGLMAIServiceController {
     @Resource
     private IChatService chatService;
 
+    @Resource
+    private IAuthService authService;
+
     @PostMapping("completions")
     public ResponseBodyEmitter completionsStream(
             @RequestBody ChatGLMRequestDTO request,
@@ -37,10 +41,11 @@ public class ChatGLMAIServiceController {
         response.setHeader("Cache-Control", "no-cache");
         //2. 构建异步响应对象
         ResponseBodyEmitter emitter = new ResponseBodyEmitter(3 * 60 * 1000L);
-        //3. 鉴权
-//        boolean success = authService.checkToken(token);
+        //3. 鉴权 TODO: 修改鉴权方式-> token过期拦截
+        boolean success = authService.checkToken(token);
 
-        if (!token.equals("kitten")) { // !success
+//        if (!token.equals("kitten")) { // !success
+        if (!success){
             try {
                 emitter.send(Constants.ResponseCode.TOKEN_ERROR.getCode());
             } catch (IOException e) {

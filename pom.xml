@@ -33,7 +33,7 @@
     <mysqlConnector.version>5.1.34</mysqlConnector.version>
     <fastjson.version>2.0.28</fastjson.version>
     <commons.lang.version>3.9</commons.lang.version>
-    <guava.version>30.1-jre</guava.version>
+    <guava.version>32.1.2-jre</guava.version>
     <dom4j.version>1.6.1</dom4j.version>
     <xstream.version>1.4.10</xstream.version>
     <jjwt.version>0.9.1</jjwt.version>

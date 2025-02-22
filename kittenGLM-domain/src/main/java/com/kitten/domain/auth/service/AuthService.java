@@ -5,6 +5,7 @@ import com.kitten.domain.auth.model.entity.AuthStateEntity;
 import com.kitten.domain.auth.model.valobj.AuthTypeVO;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -12,6 +13,7 @@ import javax.annotation.Resource;
 @Slf4j
 @Service
 public class AuthService extends AbstractAuthService {
+
     @Resource
     private Cache<String, String> codeCache;
 
