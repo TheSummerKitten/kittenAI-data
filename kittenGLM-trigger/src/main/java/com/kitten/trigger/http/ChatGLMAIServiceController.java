@@ -46,6 +46,7 @@ public class ChatGLMAIServiceController {
 
 //        if (!token.equals("kitten")) { // !success
         if (!success){
+            log.info("鉴权失败");
             try {
                 emitter.send(Constants.ResponseCode.TOKEN_ERROR.getCode());
             } catch (IOException e) {
@@ -54,6 +55,7 @@ public class ChatGLMAIServiceController {
             emitter.complete();
             return emitter;
         }
+        log.info("鉴权成功");
         //2. 构建参数
         ChatProcessAggregate chatProcessAggregate = ChatProcessAggregate.builder()
                 .token(token)

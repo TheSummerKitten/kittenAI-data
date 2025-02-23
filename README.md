@@ -25,6 +25,6 @@ ChatGLM微服务应用体系
 
 ### 环境要求
 
-- Java 8+
+- Java 11+
 - Docker
 - 数据库服务（MySQL）
