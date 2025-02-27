@@ -1,0 +1,5 @@
+2-27
+1.打包问题处理
+应用打包时某个模块出现: can't find main class....
+解决: 取消总工程pom.xml的maven-compiler-plugin配置
+2.dockerfile构建+docker-build脚本
