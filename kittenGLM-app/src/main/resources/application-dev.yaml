@@ -6,6 +6,7 @@ app:
     api-version: v1
     cross-origin: '*' # * 代表所有域名都可以访问
     limit-count: 10 # 每页限制条数
+    white-list: 'http://localhost:8080' # 白名单, 不受访问次数限制的 openai
 spring:
   datasource:
     username: root
