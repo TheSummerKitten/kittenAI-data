@@ -40,3 +40,4 @@ Action:
 
 Consider defining a bean of type 'com.google.common.cache.Cache' in your configuration.
 
+25-03-01.23:55:09.397 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.

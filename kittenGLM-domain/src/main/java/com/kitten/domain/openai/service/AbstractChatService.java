@@ -2,9 +2,12 @@ package com.kitten.domain.openai.service;
 
 import com.kitten.dataTypes.enums.OpenAiChannel;
 import com.kitten.domain.openai.model.aggregates.ChatProcessAggregate;
+import com.kitten.domain.openai.model.entity.RuleLogicEntity;
+import com.kitten.domain.openai.model.valobj.LogicCheckTypeVO;
 import com.kitten.domain.openai.service.channel.OpenAiGroupService;
 import com.kitten.domain.openai.service.channel.impl.ChatGLMService;
 import com.kitten.domain.openai.service.channel.impl.ChatGPTService;
+import com.kitten.domain.openai.service.rule.factory.DefaultLogicFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
 
@@ -32,6 +35,17 @@ public abstract class AbstractChatService implements IChatService {
         });
         emitter.onError(throwable -> log.error("流式问答请求疫情，使用模型：{}", chatProcess.getModel(), throwable));
 
+        // 2. 规则过滤
+        RuleLogicEntity<ChatProcessAggregate> ruleLogicEntity = this.doCheckLogic(chatProcess,
+                DefaultLogicFactory.LogicModel.ACCESS_LIMIT.getCode(),
+                DefaultLogicFactory.LogicModel.SENSITIVE_WORD.getCode());
+        if (!LogicCheckTypeVO.SUCCESS.equals(ruleLogicEntity.getType())) {
+            emitter.send(ruleLogicEntity.getInfo());
+            emitter.complete();
+            return emitter;
+        }
+
+
         // 3. 应答处理
         log.info("开始处理请求");
         openAiGroup.get(chatProcess.getChannel()).doMessageResponse(chatProcess, emitter);
@@ -39,6 +53,9 @@ public abstract class AbstractChatService implements IChatService {
         // 4. 返回结果
         return emitter;
     }
+
+    protected abstract RuleLogicEntity<ChatProcessAggregate> doCheckLogic(ChatProcessAggregate chatProcess, String... logics) throws Exception;
+
 
 
 }

@@ -66,3 +66,96 @@ Action:
 
 Consider defining a bean of type 'com.google.common.cache.Cache' in your configuration.
 
+25-03-01.23:55:08.549 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 2416 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-01.23:55:08.553 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-01.23:55:09.397 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-01.23:55:09.835 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-01.23:55:09.844 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-01.23:55:09.846 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-01.23:55:09.846 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-01.23:55:10.048 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-01.23:55:10.048 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1447 ms
+25-03-01.23:55:10.341 [main            ] INFO  ChatService            - ChatService init
+25-03-01.23:55:11.348 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-01.23:55:11.370 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-01.23:55:11.384 [main            ] INFO  Application            - Started Application in 3.421 seconds (JVM running for 4.961)
+25-03-01.23:55:11.387 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-01.23:57:00.603 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-01.23:57:00.604 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-01.23:57:00.605 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-03-01.23:58:00.838 [http-nio-8091-exec-2] INFO  WeiXinPortalController - 微信验证开始, appid: wx54cfcf6cc5fca984, signature: 83a83a9f1e4fa5943c01d473d80fe8e2fcdb3227, timestamp: 1740844680, nonce: 783505378, echostr: 2269019589286772719
+25-03-01.23:58:00.878 [http-nio-8091-exec-2] INFO  WeiXinPortalController - 微信公众号验签信息wx54cfcf6cc5fca984 complete! 验证结果: true
+25-03-01.23:58:32.216 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740844711</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24922903959648682</MsgId>
+</xml>
+25-03-01.23:58:32.439 [http-nio-8091-exec-4] INFO  WeiXinBehaviorService  - 生成四位数验证码: 6463
+25-03-01.23:58:32.495 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740844712</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:6463 有效期3分钟]]></Content>
+</xml>
+25-03-01.23:59:42.851 [http-nio-8091-exec-3] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 6463
+25-03-01.23:59:43.019 [http-nio-8091-exec-3] INFO  AuthController         - 鉴权登录校验完成，验证码: 6463 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTU4MiwiaWF0IjoxNzQwODQ0NzgyLCJqdGkiOiJmNmNiMTkzMC00YjRlLTQ3NjAtYTYwNy01ZTY1OWJiOTYwMjIifQ.nZD5E-lIeMatD8stwTBbOiRo3BulkBEoE06slvxM5IU"}
+25-03-02.00:00:03.273 [http-nio-8091-exec-7] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办","role":"user"},{"content":"多休息，多饮水，饮食清淡，必要时使用感冒药，如有高烧或症状加重，及时就医。","role":"system"},{"content":"你妈的","role":"user"}]
+25-03-02.00:00:03.273 [http-nio-8091-exec-7] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTU4MiwiaWF0IjoxNzQwODQ0NzgyLCJqdGkiOiJmNmNiMTkzMC00YjRlLTQ3NjAtYTYwNy01ZTY1OWJiOTYwMjIifQ.nZD5E-lIeMatD8stwTBbOiRo3BulkBEoE06slvxM5IU
+25-03-02.00:00:40.669 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740844839</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[123]]></Content>
+<MsgId>24922906732465951</MsgId>
+</xml>
+25-03-02.00:00:40.677 [http-nio-8091-exec-8] INFO  WeiXinBehaviorService  - 生成四位数验证码: 9589
+25-03-02.00:00:40.681 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740844840</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:9589 有效期3分钟]]></Content>
+</xml>
+25-03-02.00:00:47.903 [http-nio-8091-exec-9] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 9589
+25-03-02.00:00:47.903 [http-nio-8091-exec-9] INFO  AuthController         - 鉴权登录校验完成，验证码: 9589 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTY0NywiaWF0IjoxNzQwODQ0ODQ3LCJqdGkiOiIxMjVjNWUxNS1kZmQyLTRjMjEtOTRiZS1kOTAwNDZjYmZiODEifQ.3c4O_wpo2gu5mY-eEhMesKVk4C2rHp3AHm6pMSOiVBQ"}
+25-03-02.00:01:19.148 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办","role":"user"}]
+25-03-02.00:01:19.148 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTY0NywiaWF0IjoxNzQwODQ0ODQ3LCJqdGkiOiIxMjVjNWUxNS1kZmQyLTRjMjEtOTRiZS1kOTAwNDZjYmZiODEifQ.3c4O_wpo2gu5mY-eEhMesKVk4C2rHp3AHm6pMSOiVBQ
+25-03-02.00:03:37.981 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740845013</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24922906958546924</MsgId>
+</xml>
+25-03-02.00:03:37.997 [http-nio-8091-exec-4] INFO  WeiXinBehaviorService  - 生成四位数验证码: 0458
+25-03-02.00:03:38.003 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740845017</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:0458 有效期3分钟]]></Content>
+</xml>
+25-03-02.00:03:43.494 [http-nio-8091-exec-5] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 0458
+25-03-02.00:03:43.494 [http-nio-8091-exec-5] INFO  AuthController         - 鉴权登录校验完成，验证码: 0458 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTgyMywiaWF0IjoxNzQwODQ1MDIzLCJqdGkiOiIzOGNkYjQ3OS1mZGU5LTQ3OGUtYjM4YS0zM2UyNTkxZWU2MjMifQ.YGefwf-vvC6t-9PLfFE_6Y_aA-LwPfhfnxvoMSC8rCg"}
+25-03-02.00:04:03.081 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办","role":"user"},{"content":"0003","role":"system"},{"content":"发烧了怎么办","role":"user"}]
+25-03-02.00:04:03.081 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTgyMywiaWF0IjoxNzQwODQ1MDIzLCJqdGkiOiIzOGNkYjQ3OS1mZGU5LTQ3OGUtYjM4YS0zM2UyNTkxZWU2MjMifQ.YGefwf-vvC6t-9PLfFE_6Y_aA-LwPfhfnxvoMSC8rCg
+25-03-02.00:05:01.004 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740845100</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[111]]></Content>
+<MsgId>24922910907862278</MsgId>
+</xml>
+25-03-02.00:05:01.019 [http-nio-8091-exec-8] INFO  WeiXinBehaviorService  - 生成四位数验证码: 4494
+25-03-02.00:05:01.023 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740845101</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:4494 有效期3分钟]]></Content>
+</xml>
+25-03-02.00:05:08.344 [http-nio-8091-exec-9] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 4494
+25-03-02.00:05:08.346 [http-nio-8091-exec-9] INFO  AuthController         - 鉴权登录校验完成，验证码: 4494 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTkwOCwiaWF0IjoxNzQwODQ1MTA4LCJqdGkiOiIxYzhmNjg1Ny1lNDU5LTQ3MTQtOTg4ZS05MjMxNTIzMjllZGEifQ.fjtrJpz-W3gpKgSdvgBTbzZw8ThR5CkXwBEhUozhr6o"}
