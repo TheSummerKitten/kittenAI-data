@@ -39,6 +39,7 @@ public abstract class AbstractChatService implements IChatService {
         RuleLogicEntity<ChatProcessAggregate> ruleLogicEntity = this.doCheckLogic(chatProcess,
                 DefaultLogicFactory.LogicModel.ACCESS_LIMIT.getCode(),
                 DefaultLogicFactory.LogicModel.SENSITIVE_WORD.getCode());
+        log.info("规则校验结果: {}", ruleLogicEntity.getType());
         if (!LogicCheckTypeVO.SUCCESS.equals(ruleLogicEntity.getType())) {
             emitter.send(ruleLogicEntity.getInfo());
             emitter.complete();

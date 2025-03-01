@@ -470,3 +470,212 @@ java.lang.NullPointerException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:829)
+25-03-02.00:46:46.820 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 21908 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-02.00:46:46.823 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-02.00:46:47.715 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-02.00:46:48.210 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-02.00:46:48.236 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-02.00:46:48.237 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-02.00:46:48.237 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-02.00:46:48.401 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-02.00:46:48.401 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1523 ms
+25-03-02.00:46:48.711 [main            ] INFO  ChatService            - ChatService init
+25-03-02.00:46:49.759 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-02.00:46:49.783 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-02.00:46:49.796 [main            ] INFO  Application            - Started Application in 3.577 seconds (JVM running for 5.04)
+25-03-02.00:46:49.800 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-02.00:47:08.746 [http-nio-8091-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-02.00:47:08.746 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-02.00:47:08.747 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-03-02.00:47:09.151 [http-nio-8091-exec-2] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办(20字内回复)","role":"user"}]
+25-03-02.00:47:09.155 [http-nio-8091-exec-2] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-02.00:47:10.941 [http-nio-8091-exec-2] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=null, openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, model=glm_4_flash, messages=[MessageEntity(role=system, content=请问有什么需要帮助的吗？, name=null), MessageEntity(role=user, content=感冒了怎么办(20字内回复), name=null)])
+25-03-02.00:47:10.941 [http-nio-8091-exec-2] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-02.00:47:10.972 [http-nio-8091-exec-2] INFO  AbstractChatService    - 开始处理请求
+25-03-02.00:47:13.392 [http-nio-8091-exec-2] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"请问有什么需要帮助的吗？"},{"role":"user","content":"感冒了怎么办(20字内回复)"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740847630972","isCompatible":true}
+25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 299
+25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-02.00:47:13.441 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (1319ms)
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Sat, 01 Mar 2025 16:47:14 GMT
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=1a0c63a517408476339891442e003b8e7ce2c3f9ebf3a8adac35b7fe9e2efc;path=/;HttpOnly;Max-Age=1800
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 2025030200471419af24e8d2224442
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-02.00:47:14.764 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-02.00:47:14.872 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 多
+25-03-02.00:47:14.902 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喝水
+25-03-02.00:47:14.902 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:14.904 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 休息
+25-03-02.00:47:14.906 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:14.907 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 必要时
+25-03-02.00:47:14.907 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 就医
+25-03-02.00:47:14.907 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:47:14.951 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":10,"prompt_tokens":22,"total_tokens":32}}
+25-03-02.00:47:14.970 [http-nio-8091-exec-1] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-02.00:47:38.820 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(20字内回复)","role":"user"},{"content":"多喝水，休息，必要时就医。","role":"system"},{"content":"你妈的, 给我打钱","role":"user"}]
+25-03-02.00:47:38.820 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=null, openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, model=glm_4_flash, messages=[MessageEntity(role=user, content=感冒了怎么办(20字内回复), name=null), MessageEntity(role=system, content=多喝水，休息，必要时就医。, name=null), MessageEntity(role=user, content=你妈的, 给我打钱, name=null)])
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  SensitiveWordConfig    - 敏感词:你妈的
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  AbstractChatService    - 开始处理请求
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"感冒了怎么办(20字内回复)"},{"role":"user","content":"多喝水，休息，必要时就医。"},{"role":"user","content":"你妈的, 给我打钱"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740847658824","isCompatible":true}
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 354
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (337ms)
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Sat, 01 Mar 2025 16:47:39 GMT
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=1a0c63a517408476587951772e003be56fc27770e69f16602e29f698cfd634;path=/;HttpOnly;Max-Age=1800
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 202503020047385a04715a8a9f4355
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 抱歉
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 作为
+25-03-02.00:47:39.307 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] AI
+25-03-02.00:47:39.396 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:39.397 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 我
+25-03-02.00:47:39.398 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 无法
+25-03-02.00:47:39.398 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 进行
+25-03-02.00:47:39.461 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 实际
+25-03-02.00:47:39.463 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的经济
+25-03-02.00:47:39.464 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 交易
+25-03-02.00:47:39.465 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-02.00:47:39.729 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 操作
+25-03-02.00:47:39.732 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:47:39.732 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果你
+25-03-02.00:47:39.732 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 需要
+25-03-02.00:47:39.771 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助
+25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 可以
+25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 告诉我
+25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 具体
+25-03-02.00:47:39.977 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的情况
+25-03-02.00:47:39.979 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:39.981 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 我会
+25-03-02.00:47:39.981 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 尽力
+25-03-02.00:47:40.041 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 提供
+25-03-02.00:47:40.041 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 相关信息
+25-03-02.00:47:40.041 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-02.00:47:40.043 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 建议
+25-03-02.00:47:40.101 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:47:40.206 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":32,"prompt_tokens":34,"total_tokens":66}}
+25-03-02.00:47:40.209 [http-nio-8091-exec-4] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-02.00:50:31.039 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 22924 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-02.00:50:31.042 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-02.00:50:31.911 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-02.00:50:32.372 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-02.00:50:32.427 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-02.00:50:32.427 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-02.00:50:32.428 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-02.00:50:32.557 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-02.00:50:32.557 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1464 ms
+25-03-02.00:50:32.941 [main            ] INFO  ChatService            - ChatService init
+25-03-02.00:50:33.939 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-02.00:50:33.961 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-02.00:50:33.973 [main            ] INFO  Application            - Started Application in 3.547 seconds (JVM running for 4.937)
+25-03-02.00:50:33.976 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-02.00:50:44.280 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-02.00:50:44.280 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-02.00:50:44.283 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 3 ms
+25-03-02.00:50:44.718 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"你妈的, 给我打钱","role":"user"},{"content":"抱歉，作为AI，我无法进行实际的经济交易或操作。如果你需要帮助，可以告诉我具体的情况，我会尽力提供相关信息或建议。","role":"system"},{"content":"你妈的, 给我打钱","role":"user"}]
+25-03-02.00:50:44.720 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-02.00:50:44.816 [http-nio-8091-exec-1] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=null, openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, model=glm_4_flash, messages=[MessageEntity(role=user, content=你妈的, 给我打钱, name=null), MessageEntity(role=system, content=抱歉，作为AI，我无法进行实际的经济交易或操作。如果你需要帮助，可以告诉我具体的情况，我会尽力提供相关信息或建议。, name=null), MessageEntity(role=user, content=你妈的, 给我打钱, name=null)])
+25-03-02.00:50:44.822 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-02.00:50:44.859 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:你妈的
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:法
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:经济
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:操
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:信息
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:你妈的
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  AbstractChatService    - 规则校验结果: SUCCESS
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  AbstractChatService    - 开始处理请求
+25-03-02.00:50:44.930 [http-nio-8091-exec-1] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"你妈的, 给我打钱"},{"role":"user","content":"抱歉，作为AI，我无法进行实际的经济交易或操作。如果你需要帮助，可以告诉我具体的情况，我会尽力提供相关信息或建议。"},{"role":"user","content":"你妈的, 给我打钱"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740847844864","isCompatible":true}
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 471
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (1130ms)
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Sat, 01 Mar 2025 16:50:46 GMT
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117408478453534774e0038470c28fd774c1a2c31858a7caf7883c1;path=/;HttpOnly;Max-Age=1800
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 20250302005045e110810fda4048c4
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-02.00:50:46.207 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 很
+25-03-02.00:50:46.226 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 抱歉
+25-03-02.00:50:46.229 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:50:46.233 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 但我
+25-03-02.00:50:46.234 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 无法
+25-03-02.00:50:46.331 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助你
+25-03-02.00:50:46.468 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 进行
+25-03-02.00:50:46.613 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 金钱
+25-03-02.00:50:46.820 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 交易
+25-03-02.00:50:46.903 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-02.00:50:47.032 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 提供
+25-03-02.00:50:47.316 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 打
+25-03-02.00:50:47.334 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 钱
+25-03-02.00:50:47.335 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的服务
+25-03-02.00:50:47.336 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:50:47.535 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果你
+25-03-02.00:50:47.559 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 有
+25-03-02.00:50:47.561 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 关于
+25-03-02.00:50:47.565 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 金钱
+25-03-02.00:50:47.570 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 管理
+25-03-02.00:50:47.704 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 、
+25-03-02.00:50:47.704 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如何
+25-03-02.00:50:47.707 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 处理
+25-03-02.00:50:47.832 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 财务
+25-03-02.00:50:47.832 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 问题
+25-03-02.00:50:47.845 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或其他
+25-03-02.00:50:47.846 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 相关
+25-03-02.00:50:47.892 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 问题的
+25-03-02.00:50:47.892 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 疑问
+25-03-02.00:50:48.027 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:50:48.163 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 我可以
+25-03-02.00:50:48.300 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 尝试
+25-03-02.00:50:48.445 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 提供
+25-03-02.00:50:48.573 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助
+25-03-02.00:50:48.715 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 和建议
+25-03-02.00:50:48.853 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:50:49.070 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果你
+25-03-02.00:50:49.150 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 正在
+25-03-02.00:50:49.377 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 经历
+25-03-02.00:50:49.459 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 紧急
+25-03-02.00:50:49.687 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 情况
+25-03-02.00:50:49.782 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:50:49.951 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 请
+25-03-02.00:50:50.081 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 考虑
+25-03-02.00:50:50.209 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 联系
+25-03-02.00:50:50.359 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 亲友
+25-03-02.00:50:50.492 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-02.00:50:50.637 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 专业的
+25-03-02.00:50:50.824 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 财务
+25-03-02.00:50:50.930 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 顾问
+25-03-02.00:50:51.119 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:50:51.450 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":53,"prompt_tokens":55,"total_tokens":108}}
+25-03-02.00:50:51.466 [http-nio-8091-exec-2] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash

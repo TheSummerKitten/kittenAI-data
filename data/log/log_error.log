@@ -179,3 +179,5 @@ java.lang.NullPointerException: null
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:829)
+25-03-02.00:46:47.715 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-02.00:50:31.911 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
