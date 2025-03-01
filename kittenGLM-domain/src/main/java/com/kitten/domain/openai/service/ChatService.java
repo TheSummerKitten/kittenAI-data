@@ -43,6 +43,7 @@ public class ChatService extends AbstractChatService {
     // 子类实现父类抽象方法
     @Override
     protected RuleLogicEntity<ChatProcessAggregate> doCheckLogic(ChatProcessAggregate chatProcess, String... logics) throws Exception {
+        log.info("ChatService 过滤器链: + process参数" + chatProcess);
         Map<String, ILogicFilter> logicFilterMap = logicFactory.openLogicFilter();
         RuleLogicEntity<ChatProcessAggregate> entity = null;
         for (String code : logics) {

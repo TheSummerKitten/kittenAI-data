@@ -3,6 +3,7 @@ package com.kitten.domain.auth.service;
 import com.google.common.cache.Cache;
 import com.kitten.domain.auth.model.entity.AuthStateEntity;
 import com.kitten.domain.auth.model.valobj.AuthTypeVO;
+import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,12 @@ public class AuthService extends AbstractAuthService {
 
     @Override
     public boolean checkToken(String token) {
-        return false;
+        return isVerify(token);
+    }
+
+    @Override
+    public String openid(String token) {
+        Claims claims = decode(token);
+        return claims.get("openId").toString();
     }
 }

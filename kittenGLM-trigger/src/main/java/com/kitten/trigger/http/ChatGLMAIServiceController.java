@@ -55,8 +55,9 @@ public class ChatGLMAIServiceController {
             return emitter;
         }
         //2. 构建参数
+        String openId = authService.openid(token);
         ChatProcessAggregate chatProcessAggregate = ChatProcessAggregate.builder()
-                .token(token)
+                .openid(openId)
                 .model(request.getModel())
                 .messages(request.getMessages().stream().map(entity -> MessageEntity.builder()
                         .role(entity.getRole())

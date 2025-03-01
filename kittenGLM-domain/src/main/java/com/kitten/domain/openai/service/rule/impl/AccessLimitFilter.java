@@ -40,6 +40,7 @@ public class AccessLimitFilter implements ILogicFilter {
                     .build();
         }
         String openid = chatProcess.getOpenid();
+        log.info("openid:{}", openid);
 
         //2.判断访问次数
         int visitCount = visitCache.get(openid, () -> 0);
