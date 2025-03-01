@@ -41,7 +41,7 @@ public class ChatGLMAIServiceController {
         response.setHeader("Cache-Control", "no-cache");
         //2. 构建异步响应对象
         ResponseBodyEmitter emitter = new ResponseBodyEmitter(3 * 60 * 1000L);
-        //3. 鉴权 TODO: 修改鉴权方式-> token过期拦截
+        //3. 鉴权
         boolean success = authService.checkToken(token);
 
 //        if (!token.equals("kitten")) { // !success
