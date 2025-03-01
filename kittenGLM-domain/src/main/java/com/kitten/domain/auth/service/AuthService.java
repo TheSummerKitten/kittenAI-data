@@ -43,6 +43,6 @@ public class AuthService extends AbstractAuthService {
 
     @Override
     public boolean checkToken(String token) {
-        return false;
+        return isVerify(token);
     }
 }
