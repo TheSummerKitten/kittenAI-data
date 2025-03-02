@@ -1,187 +1,681 @@
-25-01-16.22:47:38.049 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 67460 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-01-16.22:47:38.052 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-01-16.22:47:38.461 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-01-16.22:47:38.739 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-01-16.22:47:38.749 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-01-16.22:47:38.749 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-01-16.22:47:38.750 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-01-16.22:47:38.872 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-01-16.22:47:38.872 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 792 ms
-25-01-16.22:47:39.065 [main            ] ERROR HikariConfig           - Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@71bc1ae4
-25-01-16.22:47:39.066 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-25-01-16.22:47:39.068 [main            ] INFO  StandardService        - Stopping service [Tomcat]
-25-01-16.22:47:39.074 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+25-03-01.23:47:19.070 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 22728 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-01.23:47:19.072 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-01.23:47:20.907 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-01.23:47:21.354 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-01.23:47:21.377 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-01.23:47:21.377 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-01.23:47:21.377 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-01.23:47:22.591 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-01.23:47:22.591 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3454 ms
+25-03-01.23:47:23.014 [main            ] INFO  ChatService            - ChatService init
+25-03-01.23:47:23.026 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [D:\OpenAI\Server\kittenChat-data\kittenGLM-domain\target\classes\com\kitten\domain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
+25-03-01.23:47:23.026 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-03-01.23:47:23.040 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.base@11.0.24/java.lang.Object.wait(Native Method)
  java.base@11.0.24/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
  app//com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
-25-01-16.22:47:39.084 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+25-03-01.23:47:23.051 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-25-01-16.22:47:39.106 [main            ] ERROR SpringApplication      - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.kitten.app.Application.main(Application.java:14)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 19 common frames omitted
-Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491)
-	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463)
-	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357)
-	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90)
+25-03-01.23:47:23.077 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.kitten.domain.openai.service.rule.factory.DefaultLogicFactory required a bean of type 'com.google.common.cache.Cache' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.google.common.cache.Cache' in your configuration.
+
+25-03-01.23:51:44.165 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 23116 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-01.23:51:44.170 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-01.23:51:44.975 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-01.23:51:45.410 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-01.23:51:45.436 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-01.23:51:45.436 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-01.23:51:45.436 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-01.23:51:45.578 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-01.23:51:45.578 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1353 ms
+25-03-01.23:51:45.882 [main            ] INFO  ChatService            - ChatService init
+25-03-01.23:51:45.892 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [D:\OpenAI\Server\kittenChat-data\kittenGLM-domain\target\classes\com\kitten\domain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
+25-03-01.23:51:45.897 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-03-01.23:51:45.905 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.24/java.lang.Object.wait(Native Method)
+ java.base@11.0.24/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ app//com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+25-03-01.23:51:45.918 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-03-01.23:51:45.940 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.kitten.domain.openai.service.rule.factory.DefaultLogicFactory required a bean of type 'com.google.common.cache.Cache' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.google.common.cache.Cache' in your configuration.
+
+25-03-01.23:55:08.549 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 2416 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-01.23:55:08.553 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-01.23:55:09.397 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-01.23:55:09.835 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-01.23:55:09.844 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-01.23:55:09.846 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-01.23:55:09.846 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-01.23:55:10.048 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-01.23:55:10.048 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1447 ms
+25-03-01.23:55:10.341 [main            ] INFO  ChatService            - ChatService init
+25-03-01.23:55:11.348 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-01.23:55:11.370 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-01.23:55:11.384 [main            ] INFO  Application            - Started Application in 3.421 seconds (JVM running for 4.961)
+25-03-01.23:55:11.387 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-01.23:57:00.603 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-01.23:57:00.604 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-01.23:57:00.605 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-03-01.23:58:00.838 [http-nio-8091-exec-2] INFO  WeiXinPortalController - 微信验证开始, appid: wx54cfcf6cc5fca984, signature: 83a83a9f1e4fa5943c01d473d80fe8e2fcdb3227, timestamp: 1740844680, nonce: 783505378, echostr: 2269019589286772719
+25-03-01.23:58:00.878 [http-nio-8091-exec-2] INFO  WeiXinPortalController - 微信公众号验签信息wx54cfcf6cc5fca984 complete! 验证结果: true
+25-03-01.23:58:32.216 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740844711</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24922903959648682</MsgId>
+</xml>
+25-03-01.23:58:32.439 [http-nio-8091-exec-4] INFO  WeiXinBehaviorService  - 生成四位数验证码: 6463
+25-03-01.23:58:32.495 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740844712</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:6463 有效期3分钟]]></Content>
+</xml>
+25-03-01.23:59:42.851 [http-nio-8091-exec-3] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 6463
+25-03-01.23:59:43.019 [http-nio-8091-exec-3] INFO  AuthController         - 鉴权登录校验完成，验证码: 6463 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTU4MiwiaWF0IjoxNzQwODQ0NzgyLCJqdGkiOiJmNmNiMTkzMC00YjRlLTQ3NjAtYTYwNy01ZTY1OWJiOTYwMjIifQ.nZD5E-lIeMatD8stwTBbOiRo3BulkBEoE06slvxM5IU"}
+25-03-02.00:00:03.273 [http-nio-8091-exec-7] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办","role":"user"},{"content":"多休息，多饮水，饮食清淡，必要时使用感冒药，如有高烧或症状加重，及时就医。","role":"system"},{"content":"你妈的","role":"user"}]
+25-03-02.00:00:03.273 [http-nio-8091-exec-7] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTU4MiwiaWF0IjoxNzQwODQ0NzgyLCJqdGkiOiJmNmNiMTkzMC00YjRlLTQ3NjAtYTYwNy01ZTY1OWJiOTYwMjIifQ.nZD5E-lIeMatD8stwTBbOiRo3BulkBEoE06slvxM5IU
+25-03-02.00:00:40.669 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740844839</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[123]]></Content>
+<MsgId>24922906732465951</MsgId>
+</xml>
+25-03-02.00:00:40.677 [http-nio-8091-exec-8] INFO  WeiXinBehaviorService  - 生成四位数验证码: 9589
+25-03-02.00:00:40.681 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740844840</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:9589 有效期3分钟]]></Content>
+</xml>
+25-03-02.00:00:47.903 [http-nio-8091-exec-9] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 9589
+25-03-02.00:00:47.903 [http-nio-8091-exec-9] INFO  AuthController         - 鉴权登录校验完成，验证码: 9589 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTY0NywiaWF0IjoxNzQwODQ0ODQ3LCJqdGkiOiIxMjVjNWUxNS1kZmQyLTRjMjEtOTRiZS1kOTAwNDZjYmZiODEifQ.3c4O_wpo2gu5mY-eEhMesKVk4C2rHp3AHm6pMSOiVBQ"}
+25-03-02.00:01:19.148 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办","role":"user"}]
+25-03-02.00:01:19.148 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTY0NywiaWF0IjoxNzQwODQ0ODQ3LCJqdGkiOiIxMjVjNWUxNS1kZmQyLTRjMjEtOTRiZS1kOTAwNDZjYmZiODEifQ.3c4O_wpo2gu5mY-eEhMesKVk4C2rHp3AHm6pMSOiVBQ
+25-03-02.00:03:37.981 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740845013</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24922906958546924</MsgId>
+</xml>
+25-03-02.00:03:37.997 [http-nio-8091-exec-4] INFO  WeiXinBehaviorService  - 生成四位数验证码: 0458
+25-03-02.00:03:38.003 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740845017</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:0458 有效期3分钟]]></Content>
+</xml>
+25-03-02.00:03:43.494 [http-nio-8091-exec-5] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 0458
+25-03-02.00:03:43.494 [http-nio-8091-exec-5] INFO  AuthController         - 鉴权登录校验完成，验证码: 0458 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTgyMywiaWF0IjoxNzQwODQ1MDIzLCJqdGkiOiIzOGNkYjQ3OS1mZGU5LTQ3OGUtYjM4YS0zM2UyNTkxZWU2MjMifQ.YGefwf-vvC6t-9PLfFE_6Y_aA-LwPfhfnxvoMSC8rCg"}
+25-03-02.00:04:03.081 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办","role":"user"},{"content":"0003","role":"system"},{"content":"发烧了怎么办","role":"user"}]
+25-03-02.00:04:03.081 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTgyMywiaWF0IjoxNzQwODQ1MDIzLCJqdGkiOiIzOGNkYjQ3OS1mZGU5LTQ3OGUtYjM4YS0zM2UyNTkxZWU2MjMifQ.YGefwf-vvC6t-9PLfFE_6Y_aA-LwPfhfnxvoMSC8rCg
+25-03-02.00:05:01.004 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740845100</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[111]]></Content>
+<MsgId>24922910907862278</MsgId>
+</xml>
+25-03-02.00:05:01.019 [http-nio-8091-exec-8] INFO  WeiXinBehaviorService  - 生成四位数验证码: 4494
+25-03-02.00:05:01.023 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740845101</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:4494 有效期3分钟]]></Content>
+</xml>
+25-03-02.00:05:08.344 [http-nio-8091-exec-9] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 4494
+25-03-02.00:05:08.346 [http-nio-8091-exec-9] INFO  AuthController         - 鉴权登录校验完成，验证码: 4494 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTkwOCwiaWF0IjoxNzQwODQ1MTA4LCJqdGkiOiIxYzhmNjg1Ny1lNDU5LTQ3MTQtOTg4ZS05MjMxNTIzMjllZGEifQ.fjtrJpz-W3gpKgSdvgBTbzZw8ThR5CkXwBEhUozhr6o"}
+25-03-02.00:12:14.078 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 26764 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-02.00:12:14.083 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-02.00:12:14.969 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-02.00:12:15.400 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-02.00:12:15.437 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-02.00:12:15.437 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-02.00:12:15.437 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-02.00:12:15.578 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-02.00:12:15.578 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1435 ms
+25-03-02.00:12:15.895 [main            ] INFO  ChatService            - ChatService init
+25-03-02.00:12:16.919 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-02.00:12:16.938 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-02.00:12:16.952 [main            ] INFO  Application            - Started Application in 3.53 seconds (JVM running for 5.043)
+25-03-02.00:12:16.955 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-02.00:13:11.639 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-02.00:13:11.643 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-02.00:13:11.646 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 3 ms
+25-03-02.00:13:12.025 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"发烧了怎么办","role":"user"},{"content":"0003","role":"system"},{"content":"感冒了怎么办","role":"user"}]
+25-03-02.00:13:12.025 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTkwOCwiaWF0IjoxNzQwODQ1MTA4LCJqdGkiOiIxYzhmNjg1Ny1lNDU5LTQ3MTQtOTg4ZS05MjMxNTIzMjllZGEifQ.fjtrJpz-W3gpKgSdvgBTbzZw8ThR5CkXwBEhUozhr6o
+25-03-02.00:14:23.053 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740845662</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[403]]></Content>
+<MsgId>24922917734221356</MsgId>
+</xml>
+25-03-02.00:14:23.257 [http-nio-8091-exec-4] INFO  WeiXinBehaviorService  - 生成四位数验证码: 8888
+25-03-02.00:14:23.285 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740845663</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:8888 有效期3分钟]]></Content>
+</xml>
+25-03-02.00:14:29.726 [http-nio-8091-exec-2] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 8888
+25-03-02.00:14:29.777 [http-nio-8091-exec-2] INFO  AuthController         - 鉴权登录校验完成，验证码: 8888 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MDQ2OSwiaWF0IjoxNzQwODQ1NjY5LCJqdGkiOiI1NmY3ZjZjYi0zMDFhLTQ0YzQtYmQ5OC0wMzhiY2JlNzc3MDQifQ.6yZAq4Pm-PUzOBGbe9QB6RRUJOehT5f9uZ84jLJLZ1I"}
+25-03-02.00:14:46.902 [http-nio-8091-exec-5] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"???","role":"user"}]
+25-03-02.00:14:46.902 [http-nio-8091-exec-5] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MDQ2OSwiaWF0IjoxNzQwODQ1NjY5LCJqdGkiOiI1NmY3ZjZjYi0zMDFhLTQ0YzQtYmQ5OC0wMzhiY2JlNzc3MDQifQ.6yZAq4Pm-PUzOBGbe9QB6RRUJOehT5f9uZ84jLJLZ1I
+25-03-02.00:18:16.027 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740845895</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[132]]></Content>
+<MsgId>24922918831883874</MsgId>
+</xml>
+25-03-02.00:18:16.038 [http-nio-8091-exec-8] INFO  WeiXinBehaviorService  - 生成四位数验证码: 1694
+25-03-02.00:18:16.042 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740845896</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:1694 有效期3分钟]]></Content>
+</xml>
+25-03-02.00:18:23.007 [http-nio-8091-exec-9] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 1694
+25-03-02.00:18:23.008 [http-nio-8091-exec-9] INFO  AuthController         - 鉴权登录校验完成，验证码: 1694 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MDcwMywiaWF0IjoxNzQwODQ1OTAzLCJqdGkiOiI1YjViYTEyYS04NDljLTRhM2ItYTE1NC02MGEzZDYxNzE5NGQifQ.tFb75bVNt1fEtn8S9Y5S4IUWziWrZEoVm-cKqBDg6-M"}
+25-03-02.00:18:40.702 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm-4 | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"你好","role":"user"}]
+25-03-02.00:18:40.702 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MDcwMywiaWF0IjoxNzQwODQ1OTAzLCJqdGkiOiI1YjViYTEyYS04NDljLTRhM2ItYTE1NC02MGEzZDYxNzE5NGQifQ.tFb75bVNt1fEtn8S9Y5S4IUWziWrZEoVm-cKqBDg6-M
+25-03-02.00:24:16.115 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 25184 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-02.00:24:16.117 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-02.00:24:17.013 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-02.00:24:17.473 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-02.00:24:17.499 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-02.00:24:17.500 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-02.00:24:17.500 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-02.00:24:17.645 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-02.00:24:17.645 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1474 ms
+25-03-02.00:24:18.011 [main            ] INFO  ChatService            - ChatService init
+25-03-02.00:24:19.073 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-02.00:24:19.098 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-02.00:24:19.110 [main            ] INFO  Application            - Started Application in 3.649 seconds (JVM running for 5.239)
+25-03-02.00:24:19.112 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-02.00:24:43.835 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-02.00:24:43.835 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-02.00:24:43.835 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-03-02.00:24:43.880 [http-nio-8091-exec-1] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
+<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
+<CreateTime>1740846282</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[1123]]></Content>
+<MsgId>24922925051752513</MsgId>
+</xml>
+25-03-02.00:24:44.082 [http-nio-8091-exec-1] INFO  WeiXinBehaviorService  - 生成四位数验证码: 6344
+25-03-02.00:24:44.097 [http-nio-8091-exec-1] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
+  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
+  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
+  <CreateTime>1740846284</CreateTime>
+  <MsgType><![CDATA[text]]></MsgType>
+  <Content><![CDATA[您的验证码是:6344 有效期3分钟]]></Content>
+</xml>
+25-03-02.00:24:49.980 [http-nio-8091-exec-2] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 6344
+25-03-02.00:24:50.168 [http-nio-8091-exec-2] INFO  AuthController         - 鉴权登录校验完成，验证码: 6344 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o"}
+25-03-02.00:25:08.137 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm-4 | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办(20字内回复)","role":"user"}]
+25-03-02.00:25:08.137 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-02.00:25:08.169 [http-nio-8091-exec-3] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4011)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4922)
+	at com.kitten.domain.openai.service.rule.impl.AccessLimitFilter.filter(AccessLimitFilter.java:45)
+	at com.kitten.domain.openai.service.ChatService.doCheckLogic(ChatService.java:49)
+	at com.kitten.domain.openai.service.AbstractChatService.completions(AbstractChatService.java:39)
+	at com.kitten.trigger.http.ChatGLMAIServiceController.completionsStream(ChatGLMAIServiceController.java:68)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	... 20 common frames omitted
-25-01-16.23:05:18.027 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 23496 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-01-16.23:05:18.031 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-01-16.23:05:18.476 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-01-16.23:05:18.743 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-01-16.23:05:18.753 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-01-16.23:05:18.753 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-01-16.23:05:18.754 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-01-16.23:05:18.909 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-01-16.23:05:18.909 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 847 ms
-25-01-16.23:05:19.124 [main            ] ERROR HikariConfig           - Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@71bc1ae4
-25-01-16.23:05:19.125 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-25-01-16.23:05:19.127 [main            ] INFO  StandardService        - Stopping service [Tomcat]
-25-01-16.23:05:19.133 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@11.0.24/java.lang.Object.wait(Native Method)
- java.base@11.0.24/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
- app//com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
-25-01-16.23:05:19.140 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-25-01-16.23:05:19.153 [main            ] ERROR SpringApplication      - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.kitten.app.Application.main(Application.java:14)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 19 common frames omitted
-Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491)
-	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463)
-	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357)
-	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+25-03-02.00:27:01.764 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 25152 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-02.00:27:01.767 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-02.00:27:02.685 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-02.00:27:03.125 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-02.00:27:03.150 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-02.00:27:03.150 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-02.00:27:03.150 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-02.00:27:03.296 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-02.00:27:03.296 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1473 ms
+25-03-02.00:27:03.620 [main            ] INFO  ChatService            - ChatService init
+25-03-02.00:27:04.753 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-02.00:27:04.778 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-02.00:27:04.799 [main            ] INFO  Application            - Started Application in 3.752 seconds (JVM running for 5.274)
+25-03-02.00:27:04.799 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-02.00:27:29.771 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-02.00:27:29.771 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-02.00:27:29.776 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 5 ms
+25-03-02.00:27:30.189 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm-4 | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办","role":"user"}]
+25-03-02.00:27:30.191 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-02.00:27:30.241 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:null
+25-03-02.00:27:30.257 [http-nio-8091-exec-1] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4011)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4922)
+	at com.kitten.domain.openai.service.rule.impl.AccessLimitFilter.filter(AccessLimitFilter.java:46)
+	at com.kitten.domain.openai.service.ChatService.doCheckLogic(ChatService.java:49)
+	at com.kitten.domain.openai.service.AbstractChatService.completions(AbstractChatService.java:39)
+	at com.kitten.trigger.http.ChatGLMAIServiceController.completionsStream(ChatGLMAIServiceController.java:68)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	... 20 common frames omitted
-25-01-16.23:05:48.600 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 21724 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-01-16.23:05:48.602 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-01-16.23:05:49.005 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-01-16.23:05:49.252 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-01-16.23:05:49.258 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-01-16.23:05:49.258 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-01-16.23:05:49.259 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-01-16.23:05:49.361 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-01-16.23:05:49.361 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 730 ms
-25-01-16.23:05:49.564 [main            ] ERROR HikariConfig           - Failed to load driver class com.mysql.cj.jdbc.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@71bc1ae4
-25-01-16.23:05:49.565 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-25-01-16.23:05:49.569 [main            ] INFO  StandardService        - Stopping service [Tomcat]
-25-01-16.23:05:49.575 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@11.0.24/java.lang.Object.wait(Native Method)
- java.base@11.0.24/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
- app//com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
-25-01-16.23:05:49.583 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-25-01-16.23:05:49.596 [main            ] ERROR SpringApplication      - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.kitten.app.Application.main(Application.java:14)
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 19 common frames omitted
-Caused by: java.lang.RuntimeException: Failed to load driver class com.mysql.cj.jdbc.Driver in either of HikariConfig class loader or Thread context classloader
-	at com.zaxxer.hikari.HikariConfig.setDriverClassName(HikariConfig.java:491)
-	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperty.set(DataSourceBuilder.java:463)
-	at org.springframework.boot.jdbc.DataSourceBuilder$MappedDataSourceProperties.set(DataSourceBuilder.java:357)
-	at org.springframework.boot.jdbc.DataSourceBuilder.build(DataSourceBuilder.java:183)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48)
-	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+25-03-02.00:34:48.373 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 6148 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-02.00:34:48.377 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-02.00:34:49.259 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-02.00:34:49.696 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-02.00:34:49.705 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-02.00:34:49.706 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-02.00:34:49.706 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-02.00:34:49.842 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-02.00:34:49.842 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1410 ms
+25-03-02.00:34:50.123 [main            ] INFO  ChatService            - ChatService init
+25-03-02.00:34:51.149 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-02.00:34:51.170 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-02.00:34:51.183 [main            ] INFO  Application            - Started Application in 3.413 seconds (JVM running for 4.81)
+25-03-02.00:34:51.186 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-02.00:35:29.039 [http-nio-8091-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-02.00:35:29.039 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-02.00:35:29.039 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-03-02.00:35:29.453 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办(20字内回复)","role":"user"}]
+25-03-02.00:35:29.455 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-02.00:35:29.510 [http-nio-8091-exec-1] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o, openid=null, model=glm_4_flash, messages=[MessageEntity(role=system, content=请问有什么需要帮助的吗？, name=null), MessageEntity(role=user, content=感冒了怎么办(20字内回复), name=null)])
+25-03-02.00:35:29.512 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:null
+25-03-02.00:35:29.541 [http-nio-8091-exec-1] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4011)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4922)
+	at com.kitten.domain.openai.service.rule.impl.AccessLimitFilter.filter(AccessLimitFilter.java:46)
+	at com.kitten.domain.openai.service.ChatService.doCheckLogic(ChatService.java:50)
+	at com.kitten.domain.openai.service.AbstractChatService.completions(AbstractChatService.java:39)
+	at com.kitten.trigger.http.ChatGLMAIServiceController.completionsStream(ChatGLMAIServiceController.java:68)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
-	... 20 common frames omitted
-25-01-16.23:10:14.414 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 31888 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-01-16.23:10:14.418 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-01-16.23:10:14.830 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-01-16.23:10:15.084 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-01-16.23:10:15.096 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-01-16.23:10:15.097 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-01-16.23:10:15.097 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-01-16.23:10:15.219 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-01-16.23:10:15.219 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 766 ms
-25-01-16.23:10:15.782 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-01-16.23:10:15.798 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-01-16.23:10:15.811 [main            ] INFO  Application            - Started Application in 1.781 seconds (JVM running for 2.661)
-25-01-16.23:10:15.813 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+25-03-02.00:46:46.820 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 21908 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-02.00:46:46.823 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-02.00:46:47.715 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-02.00:46:48.210 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-02.00:46:48.236 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-02.00:46:48.237 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-02.00:46:48.237 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-02.00:46:48.401 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-02.00:46:48.401 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1523 ms
+25-03-02.00:46:48.711 [main            ] INFO  ChatService            - ChatService init
+25-03-02.00:46:49.759 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-02.00:46:49.783 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-02.00:46:49.796 [main            ] INFO  Application            - Started Application in 3.577 seconds (JVM running for 5.04)
+25-03-02.00:46:49.800 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-02.00:47:08.746 [http-nio-8091-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-02.00:47:08.746 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-02.00:47:08.747 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-03-02.00:47:09.151 [http-nio-8091-exec-2] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办(20字内回复)","role":"user"}]
+25-03-02.00:47:09.155 [http-nio-8091-exec-2] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-02.00:47:10.941 [http-nio-8091-exec-2] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=null, openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, model=glm_4_flash, messages=[MessageEntity(role=system, content=请问有什么需要帮助的吗？, name=null), MessageEntity(role=user, content=感冒了怎么办(20字内回复), name=null)])
+25-03-02.00:47:10.941 [http-nio-8091-exec-2] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-02.00:47:10.972 [http-nio-8091-exec-2] INFO  AbstractChatService    - 开始处理请求
+25-03-02.00:47:13.392 [http-nio-8091-exec-2] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"请问有什么需要帮助的吗？"},{"role":"user","content":"感冒了怎么办(20字内回复)"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740847630972","isCompatible":true}
+25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 299
+25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-02.00:47:13.441 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (1319ms)
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Sat, 01 Mar 2025 16:47:14 GMT
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=1a0c63a517408476339891442e003b8e7ce2c3f9ebf3a8adac35b7fe9e2efc;path=/;HttpOnly;Max-Age=1800
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 2025030200471419af24e8d2224442
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-02.00:47:14.764 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-02.00:47:14.872 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 多
+25-03-02.00:47:14.902 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喝水
+25-03-02.00:47:14.902 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:14.904 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 休息
+25-03-02.00:47:14.906 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:14.907 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 必要时
+25-03-02.00:47:14.907 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 就医
+25-03-02.00:47:14.907 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:47:14.951 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":10,"prompt_tokens":22,"total_tokens":32}}
+25-03-02.00:47:14.970 [http-nio-8091-exec-1] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-02.00:47:38.820 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(20字内回复)","role":"user"},{"content":"多喝水，休息，必要时就医。","role":"system"},{"content":"你妈的, 给我打钱","role":"user"}]
+25-03-02.00:47:38.820 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=null, openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, model=glm_4_flash, messages=[MessageEntity(role=user, content=感冒了怎么办(20字内回复), name=null), MessageEntity(role=system, content=多喝水，休息，必要时就医。, name=null), MessageEntity(role=user, content=你妈的, 给我打钱, name=null)])
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  SensitiveWordConfig    - 敏感词:你妈的
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  AbstractChatService    - 开始处理请求
+25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"感冒了怎么办(20字内回复)"},{"role":"user","content":"多喝水，休息，必要时就医。"},{"role":"user","content":"你妈的, 给我打钱"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740847658824","isCompatible":true}
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 354
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (337ms)
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Sat, 01 Mar 2025 16:47:39 GMT
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=1a0c63a517408476587951772e003be56fc27770e69f16602e29f698cfd634;path=/;HttpOnly;Max-Age=1800
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 202503020047385a04715a8a9f4355
+25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 抱歉
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 作为
+25-03-02.00:47:39.307 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] AI
+25-03-02.00:47:39.396 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:39.397 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 我
+25-03-02.00:47:39.398 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 无法
+25-03-02.00:47:39.398 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 进行
+25-03-02.00:47:39.461 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 实际
+25-03-02.00:47:39.463 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的经济
+25-03-02.00:47:39.464 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 交易
+25-03-02.00:47:39.465 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-02.00:47:39.729 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 操作
+25-03-02.00:47:39.732 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:47:39.732 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果你
+25-03-02.00:47:39.732 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 需要
+25-03-02.00:47:39.771 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助
+25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 可以
+25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 告诉我
+25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 具体
+25-03-02.00:47:39.977 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的情况
+25-03-02.00:47:39.979 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:47:39.981 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 我会
+25-03-02.00:47:39.981 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 尽力
+25-03-02.00:47:40.041 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 提供
+25-03-02.00:47:40.041 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 相关信息
+25-03-02.00:47:40.041 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-02.00:47:40.043 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 建议
+25-03-02.00:47:40.101 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:47:40.206 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":32,"prompt_tokens":34,"total_tokens":66}}
+25-03-02.00:47:40.209 [http-nio-8091-exec-4] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-02.00:50:31.039 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 22924 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-02.00:50:31.042 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-02.00:50:31.911 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-02.00:50:32.372 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-02.00:50:32.427 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-02.00:50:32.427 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-02.00:50:32.428 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-02.00:50:32.557 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-02.00:50:32.557 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1464 ms
+25-03-02.00:50:32.941 [main            ] INFO  ChatService            - ChatService init
+25-03-02.00:50:33.939 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-02.00:50:33.961 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-02.00:50:33.973 [main            ] INFO  Application            - Started Application in 3.547 seconds (JVM running for 4.937)
+25-03-02.00:50:33.976 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-02.00:50:44.280 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-02.00:50:44.280 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-02.00:50:44.283 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 3 ms
+25-03-02.00:50:44.718 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"你妈的, 给我打钱","role":"user"},{"content":"抱歉，作为AI，我无法进行实际的经济交易或操作。如果你需要帮助，可以告诉我具体的情况，我会尽力提供相关信息或建议。","role":"system"},{"content":"你妈的, 给我打钱","role":"user"}]
+25-03-02.00:50:44.720 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-02.00:50:44.816 [http-nio-8091-exec-1] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=null, openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, model=glm_4_flash, messages=[MessageEntity(role=user, content=你妈的, 给我打钱, name=null), MessageEntity(role=system, content=抱歉，作为AI，我无法进行实际的经济交易或操作。如果你需要帮助，可以告诉我具体的情况，我会尽力提供相关信息或建议。, name=null), MessageEntity(role=user, content=你妈的, 给我打钱, name=null)])
+25-03-02.00:50:44.822 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-02.00:50:44.859 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:你妈的
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:法
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:经济
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:操
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:信息
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:你妈的
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  AbstractChatService    - 规则校验结果: SUCCESS
+25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  AbstractChatService    - 开始处理请求
+25-03-02.00:50:44.930 [http-nio-8091-exec-1] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"你妈的, 给我打钱"},{"role":"user","content":"抱歉，作为AI，我无法进行实际的经济交易或操作。如果你需要帮助，可以告诉我具体的情况，我会尽力提供相关信息或建议。"},{"role":"user","content":"你妈的, 给我打钱"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740847844864","isCompatible":true}
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 471
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (1130ms)
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Sat, 01 Mar 2025 16:50:46 GMT
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117408478453534774e0038470c28fd774c1a2c31858a7caf7883c1;path=/;HttpOnly;Max-Age=1800
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 20250302005045e110810fda4048c4
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-02.00:50:46.207 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 很
+25-03-02.00:50:46.226 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 抱歉
+25-03-02.00:50:46.229 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:50:46.233 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 但我
+25-03-02.00:50:46.234 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 无法
+25-03-02.00:50:46.331 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助你
+25-03-02.00:50:46.468 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 进行
+25-03-02.00:50:46.613 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 金钱
+25-03-02.00:50:46.820 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 交易
+25-03-02.00:50:46.903 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-02.00:50:47.032 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 提供
+25-03-02.00:50:47.316 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 打
+25-03-02.00:50:47.334 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 钱
+25-03-02.00:50:47.335 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的服务
+25-03-02.00:50:47.336 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:50:47.535 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果你
+25-03-02.00:50:47.559 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 有
+25-03-02.00:50:47.561 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 关于
+25-03-02.00:50:47.565 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 金钱
+25-03-02.00:50:47.570 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 管理
+25-03-02.00:50:47.704 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 、
+25-03-02.00:50:47.704 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如何
+25-03-02.00:50:47.707 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 处理
+25-03-02.00:50:47.832 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 财务
+25-03-02.00:50:47.832 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 问题
+25-03-02.00:50:47.845 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或其他
+25-03-02.00:50:47.846 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 相关
+25-03-02.00:50:47.892 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 问题的
+25-03-02.00:50:47.892 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 疑问
+25-03-02.00:50:48.027 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:50:48.163 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 我可以
+25-03-02.00:50:48.300 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 尝试
+25-03-02.00:50:48.445 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 提供
+25-03-02.00:50:48.573 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助
+25-03-02.00:50:48.715 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 和建议
+25-03-02.00:50:48.853 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:50:49.070 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果你
+25-03-02.00:50:49.150 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 正在
+25-03-02.00:50:49.377 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 经历
+25-03-02.00:50:49.459 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 紧急
+25-03-02.00:50:49.687 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 情况
+25-03-02.00:50:49.782 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-02.00:50:49.951 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 请
+25-03-02.00:50:50.081 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 考虑
+25-03-02.00:50:50.209 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 联系
+25-03-02.00:50:50.359 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 亲友
+25-03-02.00:50:50.492 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-02.00:50:50.637 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 专业的
+25-03-02.00:50:50.824 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 财务
+25-03-02.00:50:50.930 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 顾问
+25-03-02.00:50:51.119 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-02.00:50:51.450 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":53,"prompt_tokens":55,"total_tokens":108}}
+25-03-02.00:50:51.466 [http-nio-8091-exec-2] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash

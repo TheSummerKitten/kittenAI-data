@@ -6,11 +6,12 @@ app:
     api-version: v1
     cross-origin: '*' # * 代表所有域名都可以访问
     limit-count: 10 # 每页限制条数
+    white-list: 'http://localhost:8080' # 白名单, 不受访问次数限制的 openai
 spring:
   datasource:
     username: root
-    password: 246823579aA
-    url: jdbc:mysql://localhost:3306/openai?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
+    password: 491300
+    url: jdbc:mysql://localhost:3406/openai?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC
     driver-class-name: com.mysql.jdbc.Driver
     hikari:
       pool-name: Retail_HikariCP
@@ -30,3 +31,27 @@ logging:
   level:
     root: info
   config: classpath:logback-spring.xml
+
+# chatGLM-Config
+chatglm:
+  sdk:
+    config:
+      enable: true
+      api-host: https://open.bigmodel.cn/
+      api-secret-key: edb37ef90776015a5b2e3a30c9d7d55a.LTHwEc97IB2luU9l
+# 线程池配置
+thread:
+  pool:
+    executor:
+      config:
+        block-queue-size: 100
+        core-pool-size: 20
+        max-pool-size: 50
+        keep-alive-time: 5000
+        policy: CallerRunsPolicy
+
+wx:
+  config:
+    originalid: gh_0e28293f0408
+    appid: wx54cfcf6cc5fca984
+    token: kitten
