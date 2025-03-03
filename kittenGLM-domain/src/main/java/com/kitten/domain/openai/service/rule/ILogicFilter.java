@@ -7,7 +7,7 @@ import com.kitten.domain.openai.model.entity.RuleLogicEntity;
  * @author TheKitten
  * @description: 规则过滤接口
  */
-public interface ILogicFilter {
+public interface ILogicFilter<T> {
 
-    RuleLogicEntity<ChatProcessAggregate> filter(ChatProcessAggregate chatProcess) throws Exception;
+    RuleLogicEntity<ChatProcessAggregate> filter(ChatProcessAggregate chatProcess, T data) throws Exception;
 }

@@ -4,6 +4,7 @@ package com.kitten.domain.openai.service;
 
 import com.kitten.domain.openai.model.aggregates.ChatProcessAggregate;
 import com.kitten.domain.openai.model.entity.RuleLogicEntity;
+import com.kitten.domain.openai.model.entity.UserAccountQuotaEntity;
 import com.kitten.domain.openai.model.valobj.LogicCheckTypeVO;
 import com.kitten.domain.openai.service.channel.impl.ChatGLMService;
 import com.kitten.domain.openai.service.channel.impl.ChatGPTService;
@@ -33,11 +34,14 @@ public class ChatService extends AbstractChatService {
 
     // 子类实现父类抽象方法
     @Override
-    protected RuleLogicEntity<ChatProcessAggregate> doCheckLogic(ChatProcessAggregate chatProcess, String... logics) throws Exception {
+    protected RuleLogicEntity<ChatProcessAggregate> doCheckLogic(ChatProcessAggregate chatProcess, UserAccountQuotaEntity data, String... logics) throws Exception {
         Map<String, ILogicFilter> logicFilterMap = logicFactory.openLogicFilter();
         RuleLogicEntity<ChatProcessAggregate> entity = null;
         for (String code : logics) {
-            entity = logicFilterMap.get(code).filter(chatProcess);
+            if (DefaultLogicFactory.LogicModel.NULL.getCode().equals(code)) {
+                continue;
+            }
+            entity = logicFilterMap.get(code).filter(chatProcess, data);
             if (!LogicCheckTypeVO.SUCCESS.equals(entity.getType())) return entity;
         }
         return entity != null ? entity : RuleLogicEntity.<ChatProcessAggregate>builder()

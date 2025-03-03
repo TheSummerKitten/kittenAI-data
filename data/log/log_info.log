@@ -1,23 +1,23 @@
-25-03-01.23:47:19.070 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 22728 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-01.23:47:19.072 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-01.23:47:20.907 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-03-01.23:47:21.354 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-01.23:47:21.377 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-01.23:47:21.377 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-01.23:47:21.377 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-01.23:47:22.591 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-01.23:47:22.591 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3454 ms
-25-03-01.23:47:23.014 [main            ] INFO  ChatService            - ChatService init
-25-03-01.23:47:23.026 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [D:\OpenAI\Server\kittenChat-data\kittenGLM-domain\target\classes\com\kitten\domain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
-25-03-01.23:47:23.026 [main            ] INFO  StandardService        - Stopping service [Tomcat]
-25-03-01.23:47:23.040 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@11.0.24/java.lang.Object.wait(Native Method)
- java.base@11.0.24/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+25-03-03.15:24:18.292 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 22396 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-03.15:24:18.295 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.15:24:19.304 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-03.15:24:19.704 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.15:24:19.708 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-03.15:24:19.708 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-03.15:24:19.708 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-03.15:24:19.792 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-03.15:24:19.792 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1445 ms
+25-03-03.15:24:20.179 [main            ] INFO  ChatService            - ChatService init
+25-03-03.15:24:20.179 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGLMAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kitten.domain.openai.repository.IOpeAiRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
+25-03-03.15:24:20.190 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-03-03.15:24:20.201 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/java.lang.Object.wait(Native Method)
+ java.base@17.0.12/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
  app//com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
-25-03-01.23:47:23.051 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+25-03-03.15:24:20.222 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-25-03-01.23:47:23.077 [main            ] ERROR LoggingFailureAnalysisReporter - 
+25-03-03.15:24:20.246 [main            ] ERROR LoggingFailureAnalysisReporter - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -25,33 +25,33 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.kitten.domain.openai.service.rule.factory.DefaultLogicFactory required a bean of type 'com.google.common.cache.Cache' that could not be found.
+A component required a bean of type 'com.kitten.domain.openai.repository.IOpeAiRepository' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.google.common.cache.Cache' in your configuration.
+Consider defining a bean of type 'com.kitten.domain.openai.repository.IOpeAiRepository' in your configuration.
 
-25-03-01.23:51:44.165 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 23116 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-01.23:51:44.170 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-01.23:51:44.975 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-03-01.23:51:45.410 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-01.23:51:45.436 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-01.23:51:45.436 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-01.23:51:45.436 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-01.23:51:45.578 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-01.23:51:45.578 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1353 ms
-25-03-01.23:51:45.882 [main            ] INFO  ChatService            - ChatService init
-25-03-01.23:51:45.892 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultLogicFactory' defined in file [D:\OpenAI\Server\kittenChat-data\kittenGLM-domain\target\classes\com\kitten\domain\openai\service\rule\factory\DefaultLogicFactory.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessLimitFilter': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.google.common.cache.Cache<java.lang.String, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
-25-03-01.23:51:45.897 [main            ] INFO  StandardService        - Stopping service [Tomcat]
-25-03-01.23:51:45.905 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@11.0.24/java.lang.Object.wait(Native Method)
- java.base@11.0.24/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+25-03-03.16:22:23.053 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 19876 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-03.16:22:23.055 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.16:22:23.829 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-03.16:22:24.374 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.16:22:24.382 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-03.16:22:24.383 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-03.16:22:24.383 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-03.16:22:24.586 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-03.16:22:24.586 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1480 ms
+25-03-03.16:22:24.878 [main            ] INFO  ChatService            - ChatService init
+25-03-03.16:22:24.880 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGLMAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kitten.domain.openai.repository.IOpeAiRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
+25-03-03.16:22:24.883 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-03-03.16:22:24.892 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/java.lang.Object.wait(Native Method)
+ java.base@17.0.12/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
  app//com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
-25-03-01.23:51:45.918 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+25-03-03.16:22:24.907 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-25-03-01.23:51:45.940 [main            ] ERROR LoggingFailureAnalysisReporter - 
+25-03-03.16:22:24.937 [main            ] ERROR LoggingFailureAnalysisReporter - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -59,623 +59,745 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.kitten.domain.openai.service.rule.factory.DefaultLogicFactory required a bean of type 'com.google.common.cache.Cache' that could not be found.
+A component required a bean of type 'com.kitten.domain.openai.repository.IOpeAiRepository' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.google.common.cache.Cache' in your configuration.
+Consider defining a bean of type 'com.kitten.domain.openai.repository.IOpeAiRepository' in your configuration.
 
-25-03-01.23:55:08.549 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 2416 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-01.23:55:08.553 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-01.23:55:09.397 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-03-01.23:55:09.835 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-01.23:55:09.844 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-01.23:55:09.846 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-01.23:55:09.846 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-01.23:55:10.048 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-01.23:55:10.048 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1447 ms
-25-03-01.23:55:10.341 [main            ] INFO  ChatService            - ChatService init
-25-03-01.23:55:11.348 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-01.23:55:11.370 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-01.23:55:11.384 [main            ] INFO  Application            - Started Application in 3.421 seconds (JVM running for 4.961)
-25-03-01.23:55:11.387 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-01.23:57:00.603 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-01.23:57:00.604 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-01.23:57:00.605 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-03-01.23:58:00.838 [http-nio-8091-exec-2] INFO  WeiXinPortalController - 微信验证开始, appid: wx54cfcf6cc5fca984, signature: 83a83a9f1e4fa5943c01d473d80fe8e2fcdb3227, timestamp: 1740844680, nonce: 783505378, echostr: 2269019589286772719
-25-03-01.23:58:00.878 [http-nio-8091-exec-2] INFO  WeiXinPortalController - 微信公众号验签信息wx54cfcf6cc5fca984 complete! 验证结果: true
-25-03-01.23:58:32.216 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
-<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
-<CreateTime>1740844711</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[403]]></Content>
-<MsgId>24922903959648682</MsgId>
-</xml>
-25-03-01.23:58:32.439 [http-nio-8091-exec-4] INFO  WeiXinBehaviorService  - 生成四位数验证码: 6463
-25-03-01.23:58:32.495 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
-  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
-  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
-  <CreateTime>1740844712</CreateTime>
-  <MsgType><![CDATA[text]]></MsgType>
-  <Content><![CDATA[您的验证码是:6463 有效期3分钟]]></Content>
-</xml>
-25-03-01.23:59:42.851 [http-nio-8091-exec-3] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 6463
-25-03-01.23:59:43.019 [http-nio-8091-exec-3] INFO  AuthController         - 鉴权登录校验完成，验证码: 6463 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTU4MiwiaWF0IjoxNzQwODQ0NzgyLCJqdGkiOiJmNmNiMTkzMC00YjRlLTQ3NjAtYTYwNy01ZTY1OWJiOTYwMjIifQ.nZD5E-lIeMatD8stwTBbOiRo3BulkBEoE06slvxM5IU"}
-25-03-02.00:00:03.273 [http-nio-8091-exec-7] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办","role":"user"},{"content":"多休息，多饮水，饮食清淡，必要时使用感冒药，如有高烧或症状加重，及时就医。","role":"system"},{"content":"你妈的","role":"user"}]
-25-03-02.00:00:03.273 [http-nio-8091-exec-7] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTU4MiwiaWF0IjoxNzQwODQ0NzgyLCJqdGkiOiJmNmNiMTkzMC00YjRlLTQ3NjAtYTYwNy01ZTY1OWJiOTYwMjIifQ.nZD5E-lIeMatD8stwTBbOiRo3BulkBEoE06slvxM5IU
-25-03-02.00:00:40.669 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
-<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
-<CreateTime>1740844839</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[123]]></Content>
-<MsgId>24922906732465951</MsgId>
-</xml>
-25-03-02.00:00:40.677 [http-nio-8091-exec-8] INFO  WeiXinBehaviorService  - 生成四位数验证码: 9589
-25-03-02.00:00:40.681 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
-  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
-  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
-  <CreateTime>1740844840</CreateTime>
-  <MsgType><![CDATA[text]]></MsgType>
-  <Content><![CDATA[您的验证码是:9589 有效期3分钟]]></Content>
-</xml>
-25-03-02.00:00:47.903 [http-nio-8091-exec-9] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 9589
-25-03-02.00:00:47.903 [http-nio-8091-exec-9] INFO  AuthController         - 鉴权登录校验完成，验证码: 9589 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTY0NywiaWF0IjoxNzQwODQ0ODQ3LCJqdGkiOiIxMjVjNWUxNS1kZmQyLTRjMjEtOTRiZS1kOTAwNDZjYmZiODEifQ.3c4O_wpo2gu5mY-eEhMesKVk4C2rHp3AHm6pMSOiVBQ"}
-25-03-02.00:01:19.148 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办","role":"user"}]
-25-03-02.00:01:19.148 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTY0NywiaWF0IjoxNzQwODQ0ODQ3LCJqdGkiOiIxMjVjNWUxNS1kZmQyLTRjMjEtOTRiZS1kOTAwNDZjYmZiODEifQ.3c4O_wpo2gu5mY-eEhMesKVk4C2rHp3AHm6pMSOiVBQ
-25-03-02.00:03:37.981 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
-<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
-<CreateTime>1740845013</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[403]]></Content>
-<MsgId>24922906958546924</MsgId>
-</xml>
-25-03-02.00:03:37.997 [http-nio-8091-exec-4] INFO  WeiXinBehaviorService  - 生成四位数验证码: 0458
-25-03-02.00:03:38.003 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
-  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
-  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
-  <CreateTime>1740845017</CreateTime>
-  <MsgType><![CDATA[text]]></MsgType>
-  <Content><![CDATA[您的验证码是:0458 有效期3分钟]]></Content>
-</xml>
-25-03-02.00:03:43.494 [http-nio-8091-exec-5] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 0458
-25-03-02.00:03:43.494 [http-nio-8091-exec-5] INFO  AuthController         - 鉴权登录校验完成，验证码: 0458 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTgyMywiaWF0IjoxNzQwODQ1MDIzLCJqdGkiOiIzOGNkYjQ3OS1mZGU5LTQ3OGUtYjM4YS0zM2UyNTkxZWU2MjMifQ.YGefwf-vvC6t-9PLfFE_6Y_aA-LwPfhfnxvoMSC8rCg"}
-25-03-02.00:04:03.081 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办","role":"user"},{"content":"0003","role":"system"},{"content":"发烧了怎么办","role":"user"}]
-25-03-02.00:04:03.081 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTgyMywiaWF0IjoxNzQwODQ1MDIzLCJqdGkiOiIzOGNkYjQ3OS1mZGU5LTQ3OGUtYjM4YS0zM2UyNTkxZWU2MjMifQ.YGefwf-vvC6t-9PLfFE_6Y_aA-LwPfhfnxvoMSC8rCg
-25-03-02.00:05:01.004 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
-<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
-<CreateTime>1740845100</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[111]]></Content>
-<MsgId>24922910907862278</MsgId>
-</xml>
-25-03-02.00:05:01.019 [http-nio-8091-exec-8] INFO  WeiXinBehaviorService  - 生成四位数验证码: 4494
-25-03-02.00:05:01.023 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
-  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
-  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
-  <CreateTime>1740845101</CreateTime>
-  <MsgType><![CDATA[text]]></MsgType>
-  <Content><![CDATA[您的验证码是:4494 有效期3分钟]]></Content>
-</xml>
-25-03-02.00:05:08.344 [http-nio-8091-exec-9] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 4494
-25-03-02.00:05:08.346 [http-nio-8091-exec-9] INFO  AuthController         - 鉴权登录校验完成，验证码: 4494 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTkwOCwiaWF0IjoxNzQwODQ1MTA4LCJqdGkiOiIxYzhmNjg1Ny1lNDU5LTQ3MTQtOTg4ZS05MjMxNTIzMjllZGEifQ.fjtrJpz-W3gpKgSdvgBTbzZw8ThR5CkXwBEhUozhr6o"}
-25-03-02.00:12:14.078 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 26764 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-02.00:12:14.083 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-02.00:12:14.969 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-03-02.00:12:15.400 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-02.00:12:15.437 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-02.00:12:15.437 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-02.00:12:15.437 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-02.00:12:15.578 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-02.00:12:15.578 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1435 ms
-25-03-02.00:12:15.895 [main            ] INFO  ChatService            - ChatService init
-25-03-02.00:12:16.919 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-02.00:12:16.938 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-02.00:12:16.952 [main            ] INFO  Application            - Started Application in 3.53 seconds (JVM running for 5.043)
-25-03-02.00:12:16.955 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-02.00:13:11.639 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-02.00:13:11.643 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-02.00:13:11.646 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 3 ms
-25-03-02.00:13:12.025 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"发烧了怎么办","role":"user"},{"content":"0003","role":"system"},{"content":"感冒了怎么办","role":"user"}]
-25-03-02.00:13:12.025 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ0OTkwOCwiaWF0IjoxNzQwODQ1MTA4LCJqdGkiOiIxYzhmNjg1Ny1lNDU5LTQ3MTQtOTg4ZS05MjMxNTIzMjllZGEifQ.fjtrJpz-W3gpKgSdvgBTbzZw8ThR5CkXwBEhUozhr6o
-25-03-02.00:14:23.053 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
-<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
-<CreateTime>1740845662</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[403]]></Content>
-<MsgId>24922917734221356</MsgId>
-</xml>
-25-03-02.00:14:23.257 [http-nio-8091-exec-4] INFO  WeiXinBehaviorService  - 生成四位数验证码: 8888
-25-03-02.00:14:23.285 [http-nio-8091-exec-4] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
-  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
-  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
-  <CreateTime>1740845663</CreateTime>
-  <MsgType><![CDATA[text]]></MsgType>
-  <Content><![CDATA[您的验证码是:8888 有效期3分钟]]></Content>
-</xml>
-25-03-02.00:14:29.726 [http-nio-8091-exec-2] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 8888
-25-03-02.00:14:29.777 [http-nio-8091-exec-2] INFO  AuthController         - 鉴权登录校验完成，验证码: 8888 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MDQ2OSwiaWF0IjoxNzQwODQ1NjY5LCJqdGkiOiI1NmY3ZjZjYi0zMDFhLTQ0YzQtYmQ5OC0wMzhiY2JlNzc3MDQifQ.6yZAq4Pm-PUzOBGbe9QB6RRUJOehT5f9uZ84jLJLZ1I"}
-25-03-02.00:14:46.902 [http-nio-8091-exec-5] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"???","role":"user"}]
-25-03-02.00:14:46.902 [http-nio-8091-exec-5] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MDQ2OSwiaWF0IjoxNzQwODQ1NjY5LCJqdGkiOiI1NmY3ZjZjYi0zMDFhLTQ0YzQtYmQ5OC0wMzhiY2JlNzc3MDQifQ.6yZAq4Pm-PUzOBGbe9QB6RRUJOehT5f9uZ84jLJLZ1I
-25-03-02.00:18:16.027 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
-<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
-<CreateTime>1740845895</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[132]]></Content>
-<MsgId>24922918831883874</MsgId>
-</xml>
-25-03-02.00:18:16.038 [http-nio-8091-exec-8] INFO  WeiXinBehaviorService  - 生成四位数验证码: 1694
-25-03-02.00:18:16.042 [http-nio-8091-exec-8] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
-  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
-  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
-  <CreateTime>1740845896</CreateTime>
-  <MsgType><![CDATA[text]]></MsgType>
-  <Content><![CDATA[您的验证码是:1694 有效期3分钟]]></Content>
-</xml>
-25-03-02.00:18:23.007 [http-nio-8091-exec-9] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 1694
-25-03-02.00:18:23.008 [http-nio-8091-exec-9] INFO  AuthController         - 鉴权登录校验完成，验证码: 1694 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MDcwMywiaWF0IjoxNzQwODQ1OTAzLCJqdGkiOiI1YjViYTEyYS04NDljLTRhM2ItYTE1NC02MGEzZDYxNzE5NGQifQ.tFb75bVNt1fEtn8S9Y5S4IUWziWrZEoVm-cKqBDg6-M"}
-25-03-02.00:18:40.702 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm-4 | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"你好","role":"user"}]
-25-03-02.00:18:40.702 [http-nio-8091-exec-10] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MDcwMywiaWF0IjoxNzQwODQ1OTAzLCJqdGkiOiI1YjViYTEyYS04NDljLTRhM2ItYTE1NC02MGEzZDYxNzE5NGQifQ.tFb75bVNt1fEtn8S9Y5S4IUWziWrZEoVm-cKqBDg6-M
-25-03-02.00:24:16.115 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 25184 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-02.00:24:16.117 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-02.00:24:17.013 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-03-02.00:24:17.473 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-02.00:24:17.499 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-02.00:24:17.500 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-02.00:24:17.500 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-02.00:24:17.645 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-02.00:24:17.645 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1474 ms
-25-03-02.00:24:18.011 [main            ] INFO  ChatService            - ChatService init
-25-03-02.00:24:19.073 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-02.00:24:19.098 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-02.00:24:19.110 [main            ] INFO  Application            - Started Application in 3.649 seconds (JVM running for 5.239)
-25-03-02.00:24:19.112 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-02.00:24:43.835 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-02.00:24:43.835 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-02.00:24:43.835 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
-25-03-02.00:24:43.880 [http-nio-8091-exec-1] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM开始 <xml><ToUserName><![CDATA[gh_0e28293f0408]]></ToUserName>
-<FromUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></FromUserName>
-<CreateTime>1740846282</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[1123]]></Content>
-<MsgId>24922925051752513</MsgId>
-</xml>
-25-03-02.00:24:44.082 [http-nio-8091-exec-1] INFO  WeiXinBehaviorService  - 生成四位数验证码: 6344
-25-03-02.00:24:44.097 [http-nio-8091-exec-1] INFO  WeiXinPortalController - 接收微信公众号信息请求o9QVG7PRp0kozN_yRvyw_5uY_JwM完成 <xml>
-  <ToUserName><![CDATA[o9QVG7PRp0kozN_yRvyw_5uY_JwM]]></ToUserName>
-  <FromUserName><![CDATA[gh_0e28293f0408]]></FromUserName>
-  <CreateTime>1740846284</CreateTime>
-  <MsgType><![CDATA[text]]></MsgType>
-  <Content><![CDATA[您的验证码是:6344 有效期3分钟]]></Content>
-</xml>
-25-03-02.00:24:49.980 [http-nio-8091-exec-2] INFO  AuthController         - 有用户请求登录, 鉴权: 验证码为 6344
-25-03-02.00:24:50.168 [http-nio-8091-exec-2] INFO  AuthController         - 鉴权登录校验完成，验证码: 6344 结果: {"code":"0000","info":"验证成功","openId":"o9QVG7PRp0kozN_yRvyw_5uY_JwM","token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o"}
-25-03-02.00:25:08.137 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm-4 | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办(20字内回复)","role":"user"}]
-25-03-02.00:25:08.137 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
-25-03-02.00:25:08.169 [http-nio-8091-exec-3] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-java.lang.NullPointerException: null
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)
-	at com.google.common.cache.LocalCache.get(LocalCache.java:4011)
-	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4922)
-	at com.kitten.domain.openai.service.rule.impl.AccessLimitFilter.filter(AccessLimitFilter.java:45)
-	at com.kitten.domain.openai.service.ChatService.doCheckLogic(ChatService.java:49)
-	at com.kitten.domain.openai.service.AbstractChatService.completions(AbstractChatService.java:39)
-	at com.kitten.trigger.http.ChatGLMAIServiceController.completionsStream(ChatGLMAIServiceController.java:68)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-25-03-02.00:27:01.764 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 25152 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-02.00:27:01.767 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-02.00:27:02.685 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-03-02.00:27:03.125 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-02.00:27:03.150 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-02.00:27:03.150 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-02.00:27:03.150 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-02.00:27:03.296 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-02.00:27:03.296 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1473 ms
-25-03-02.00:27:03.620 [main            ] INFO  ChatService            - ChatService init
-25-03-02.00:27:04.753 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-02.00:27:04.778 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-02.00:27:04.799 [main            ] INFO  Application            - Started Application in 3.752 seconds (JVM running for 5.274)
-25-03-02.00:27:04.799 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-02.00:27:29.771 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-02.00:27:29.771 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-02.00:27:29.776 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 5 ms
-25-03-02.00:27:30.189 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm-4 | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办","role":"user"}]
-25-03-02.00:27:30.191 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
-25-03-02.00:27:30.241 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:null
-25-03-02.00:27:30.257 [http-nio-8091-exec-1] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-java.lang.NullPointerException: null
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)
-	at com.google.common.cache.LocalCache.get(LocalCache.java:4011)
-	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4922)
-	at com.kitten.domain.openai.service.rule.impl.AccessLimitFilter.filter(AccessLimitFilter.java:46)
-	at com.kitten.domain.openai.service.ChatService.doCheckLogic(ChatService.java:49)
-	at com.kitten.domain.openai.service.AbstractChatService.completions(AbstractChatService.java:39)
-	at com.kitten.trigger.http.ChatGLMAIServiceController.completionsStream(ChatGLMAIServiceController.java:68)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-25-03-02.00:34:48.373 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 6148 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-02.00:34:48.377 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-02.00:34:49.259 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-03-02.00:34:49.696 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-02.00:34:49.705 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-02.00:34:49.706 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-02.00:34:49.706 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-02.00:34:49.842 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-02.00:34:49.842 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1410 ms
-25-03-02.00:34:50.123 [main            ] INFO  ChatService            - ChatService init
-25-03-02.00:34:51.149 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-02.00:34:51.170 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-02.00:34:51.183 [main            ] INFO  Application            - Started Application in 3.413 seconds (JVM running for 4.81)
-25-03-02.00:34:51.186 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-02.00:35:29.039 [http-nio-8091-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-02.00:35:29.039 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-02.00:35:29.039 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 0 ms
-25-03-02.00:35:29.453 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办(20字内回复)","role":"user"}]
-25-03-02.00:35:29.455 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
-25-03-02.00:35:29.510 [http-nio-8091-exec-1] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o, openid=null, model=glm_4_flash, messages=[MessageEntity(role=system, content=请问有什么需要帮助的吗？, name=null), MessageEntity(role=user, content=感冒了怎么办(20字内回复), name=null)])
-25-03-02.00:35:29.512 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:null
-25-03-02.00:35:29.541 [http-nio-8091-exec-1] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-java.lang.NullPointerException: null
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)
-	at com.google.common.cache.LocalCache.get(LocalCache.java:4011)
-	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4922)
-	at com.kitten.domain.openai.service.rule.impl.AccessLimitFilter.filter(AccessLimitFilter.java:46)
-	at com.kitten.domain.openai.service.ChatService.doCheckLogic(ChatService.java:50)
-	at com.kitten.domain.openai.service.AbstractChatService.completions(AbstractChatService.java:39)
-	at com.kitten.trigger.http.ChatGLMAIServiceController.completionsStream(ChatGLMAIServiceController.java:68)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-25-03-02.00:46:46.820 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 21908 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-02.00:46:46.823 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-02.00:46:47.715 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-03-02.00:46:48.210 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-02.00:46:48.236 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-02.00:46:48.237 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-02.00:46:48.237 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-02.00:46:48.401 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-02.00:46:48.401 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1523 ms
-25-03-02.00:46:48.711 [main            ] INFO  ChatService            - ChatService init
-25-03-02.00:46:49.759 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-02.00:46:49.783 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-02.00:46:49.796 [main            ] INFO  Application            - Started Application in 3.577 seconds (JVM running for 5.04)
-25-03-02.00:46:49.800 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-02.00:47:08.746 [http-nio-8091-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-02.00:47:08.746 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-02.00:47:08.747 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-03-02.00:47:09.151 [http-nio-8091-exec-2] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办(20字内回复)","role":"user"}]
-25-03-02.00:47:09.155 [http-nio-8091-exec-2] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
-25-03-02.00:47:10.941 [http-nio-8091-exec-2] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=null, openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, model=glm_4_flash, messages=[MessageEntity(role=system, content=请问有什么需要帮助的吗？, name=null), MessageEntity(role=user, content=感冒了怎么办(20字内回复), name=null)])
-25-03-02.00:47:10.941 [http-nio-8091-exec-2] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
-25-03-02.00:47:10.972 [http-nio-8091-exec-2] INFO  AbstractChatService    - 开始处理请求
-25-03-02.00:47:13.392 [http-nio-8091-exec-2] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"请问有什么需要帮助的吗？"},{"role":"user","content":"感冒了怎么办(20字内回复)"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740847630972","isCompatible":true}
-25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
-25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
-25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 299
-25-03-02.00:47:13.438 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
-25-03-02.00:47:13.441 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (1319ms)
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Sat, 01 Mar 2025 16:47:14 GMT
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=1a0c63a517408476339891442e003b8e7ce2c3f9ebf3a8adac35b7fe9e2efc;path=/;HttpOnly;Max-Age=1800
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 2025030200471419af24e8d2224442
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
-25-03-02.00:47:14.752 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
-25-03-02.00:47:14.764 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
-25-03-02.00:47:14.872 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 多
-25-03-02.00:47:14.902 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喝水
-25-03-02.00:47:14.902 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
-25-03-02.00:47:14.904 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 休息
-25-03-02.00:47:14.906 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
-25-03-02.00:47:14.907 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 必要时
-25-03-02.00:47:14.907 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 就医
-25-03-02.00:47:14.907 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
-25-03-02.00:47:14.951 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":10,"prompt_tokens":22,"total_tokens":32}}
-25-03-02.00:47:14.970 [http-nio-8091-exec-1] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
-25-03-02.00:47:38.820 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(20字内回复)","role":"user"},{"content":"多喝水，休息，必要时就医。","role":"system"},{"content":"你妈的, 给我打钱","role":"user"}]
-25-03-02.00:47:38.820 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
-25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=null, openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, model=glm_4_flash, messages=[MessageEntity(role=user, content=感冒了怎么办(20字内回复), name=null), MessageEntity(role=system, content=多喝水，休息，必要时就医。, name=null), MessageEntity(role=user, content=你妈的, 给我打钱, name=null)])
-25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
-25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  SensitiveWordConfig    - 敏感词:你妈的
-25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  AbstractChatService    - 开始处理请求
-25-03-02.00:47:38.824 [http-nio-8091-exec-3] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"感冒了怎么办(20字内回复)"},{"role":"user","content":"多喝水，休息，必要时就医。"},{"role":"user","content":"你妈的, 给我打钱"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740847658824","isCompatible":true}
-25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
-25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
-25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 354
-25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
-25-03-02.00:47:38.824 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
-25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (337ms)
-25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Sat, 01 Mar 2025 16:47:39 GMT
-25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
-25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=1a0c63a517408476587951772e003be56fc27770e69f16602e29f698cfd634;path=/;HttpOnly;Max-Age=1800
-25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
-25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
-25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
-25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 202503020047385a04715a8a9f4355
-25-03-02.00:47:39.168 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
-25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
-25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
-25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
-25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
-25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 抱歉
-25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
-25-03-02.00:47:39.170 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 作为
-25-03-02.00:47:39.307 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] AI
-25-03-02.00:47:39.396 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
-25-03-02.00:47:39.397 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 我
-25-03-02.00:47:39.398 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 无法
-25-03-02.00:47:39.398 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 进行
-25-03-02.00:47:39.461 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 实际
-25-03-02.00:47:39.463 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的经济
-25-03-02.00:47:39.464 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 交易
-25-03-02.00:47:39.465 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
-25-03-02.00:47:39.729 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 操作
-25-03-02.00:47:39.732 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
-25-03-02.00:47:39.732 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果你
-25-03-02.00:47:39.732 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 需要
-25-03-02.00:47:39.771 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助
-25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
-25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 可以
-25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 告诉我
-25-03-02.00:47:39.923 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 具体
-25-03-02.00:47:39.977 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的情况
-25-03-02.00:47:39.979 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
-25-03-02.00:47:39.981 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 我会
-25-03-02.00:47:39.981 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 尽力
-25-03-02.00:47:40.041 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 提供
-25-03-02.00:47:40.041 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 相关信息
-25-03-02.00:47:40.041 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
-25-03-02.00:47:40.043 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 建议
-25-03-02.00:47:40.101 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
-25-03-02.00:47:40.206 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":32,"prompt_tokens":34,"total_tokens":66}}
-25-03-02.00:47:40.209 [http-nio-8091-exec-4] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
-25-03-02.00:50:31.039 [main            ] INFO  Application            - Starting Application using Java 11.0.24 on LAPTOP-FC1VQ3PG with PID 22924 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-02.00:50:31.042 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-02.00:50:31.911 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
-25-03-02.00:50:32.372 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-02.00:50:32.427 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-02.00:50:32.427 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-02.00:50:32.428 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-02.00:50:32.557 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-02.00:50:32.557 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1464 ms
-25-03-02.00:50:32.941 [main            ] INFO  ChatService            - ChatService init
-25-03-02.00:50:33.939 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-02.00:50:33.961 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-02.00:50:33.973 [main            ] INFO  Application            - Started Application in 3.547 seconds (JVM running for 4.937)
-25-03-02.00:50:33.976 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-02.00:50:44.280 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-02.00:50:44.280 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-02.00:50:44.283 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 3 ms
-25-03-02.00:50:44.718 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"你妈的, 给我打钱","role":"user"},{"content":"抱歉，作为AI，我无法进行实际的经济交易或操作。如果你需要帮助，可以告诉我具体的情况，我会尽力提供相关信息或建议。","role":"system"},{"content":"你妈的, 给我打钱","role":"user"}]
-25-03-02.00:50:44.720 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
-25-03-02.00:50:44.816 [http-nio-8091-exec-1] INFO  ChatService            - ChatService 过滤器链: + process参数ChatProcessAggregate(token=null, openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, model=glm_4_flash, messages=[MessageEntity(role=user, content=你妈的, 给我打钱, name=null), MessageEntity(role=system, content=抱歉，作为AI，我无法进行实际的经济交易或操作。如果你需要帮助，可以告诉我具体的情况，我会尽力提供相关信息或建议。, name=null), MessageEntity(role=user, content=你妈的, 给我打钱, name=null)])
-25-03-02.00:50:44.822 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
-25-03-02.00:50:44.859 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:你妈的
-25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:法
-25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:经济
-25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:操
-25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:信息
-25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:你妈的
-25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  AbstractChatService    - 规则校验结果: SUCCESS
-25-03-02.00:50:44.861 [http-nio-8091-exec-1] INFO  AbstractChatService    - 开始处理请求
-25-03-02.00:50:44.930 [http-nio-8091-exec-1] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"你妈的, 给我打钱"},{"role":"user","content":"抱歉，作为AI，我无法进行实际的经济交易或操作。如果你需要帮助，可以告诉我具体的情况，我会尽力提供相关信息或建议。"},{"role":"user","content":"你妈的, 给我打钱"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740847844864","isCompatible":true}
-25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
-25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
-25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 471
-25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
-25-03-02.00:50:44.976 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (1130ms)
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Sat, 01 Mar 2025 16:50:46 GMT
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117408478453534774e0038470c28fd774c1a2c31858a7caf7883c1;path=/;HttpOnly;Max-Age=1800
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 20250302005045e110810fda4048c4
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
-25-03-02.00:50:46.115 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
-25-03-02.00:50:46.207 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 很
-25-03-02.00:50:46.226 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 抱歉
-25-03-02.00:50:46.229 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
-25-03-02.00:50:46.233 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 但我
-25-03-02.00:50:46.234 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 无法
-25-03-02.00:50:46.331 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助你
-25-03-02.00:50:46.468 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 进行
-25-03-02.00:50:46.613 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 金钱
-25-03-02.00:50:46.820 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 交易
-25-03-02.00:50:46.903 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
-25-03-02.00:50:47.032 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 提供
-25-03-02.00:50:47.316 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 打
-25-03-02.00:50:47.334 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 钱
-25-03-02.00:50:47.335 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的服务
-25-03-02.00:50:47.336 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
-25-03-02.00:50:47.535 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果你
-25-03-02.00:50:47.559 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 有
-25-03-02.00:50:47.561 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 关于
-25-03-02.00:50:47.565 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 金钱
-25-03-02.00:50:47.570 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 管理
-25-03-02.00:50:47.704 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 、
-25-03-02.00:50:47.704 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如何
-25-03-02.00:50:47.707 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 处理
-25-03-02.00:50:47.832 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 财务
-25-03-02.00:50:47.832 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 问题
-25-03-02.00:50:47.845 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或其他
-25-03-02.00:50:47.846 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 相关
-25-03-02.00:50:47.892 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 问题的
-25-03-02.00:50:47.892 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 疑问
-25-03-02.00:50:48.027 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
-25-03-02.00:50:48.163 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 我可以
-25-03-02.00:50:48.300 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 尝试
-25-03-02.00:50:48.445 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 提供
-25-03-02.00:50:48.573 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助
-25-03-02.00:50:48.715 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 和建议
-25-03-02.00:50:48.853 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
-25-03-02.00:50:49.070 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果你
-25-03-02.00:50:49.150 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 正在
-25-03-02.00:50:49.377 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 经历
-25-03-02.00:50:49.459 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 紧急
-25-03-02.00:50:49.687 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 情况
-25-03-02.00:50:49.782 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
-25-03-02.00:50:49.951 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 请
-25-03-02.00:50:50.081 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 考虑
-25-03-02.00:50:50.209 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 联系
-25-03-02.00:50:50.359 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 亲友
-25-03-02.00:50:50.492 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
-25-03-02.00:50:50.637 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 专业的
-25-03-02.00:50:50.824 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 财务
-25-03-02.00:50:50.930 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 顾问
-25-03-02.00:50:51.119 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
-25-03-02.00:50:51.450 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":53,"prompt_tokens":55,"total_tokens":108}}
-25-03-02.00:50:51.466 [http-nio-8091-exec-2] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-03.16:31:15.473 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 12752 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-03.16:31:15.475 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.16:31:16.171 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.kitten.app]' package. Please check your configuration.
+25-03-03.16:31:16.816 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.16:31:16.828 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-03.16:31:16.829 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-03.16:31:16.830 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-03.16:31:17.026 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-03.16:31:17.026 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1511 ms
+25-03-03.16:31:17.468 [main            ] INFO  ChatService            - ChatService init
+25-03-03.16:31:17.474 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGLMAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openAiRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kitten.infrastructure.dao.IUserAccountDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
+25-03-03.16:31:17.479 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+25-03-03.16:31:17.493 [main            ] WARN  WebappClassLoaderBase  - The web application [ROOT] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/java.lang.Object.wait(Native Method)
+ java.base@17.0.12/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ app//com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
+25-03-03.16:31:17.510 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+25-03-03.16:31:17.536 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.kitten.infrastructure.dao.IUserAccountDao' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.kitten.infrastructure.dao.IUserAccountDao' in your configuration.
+
+25-03-03.16:35:40.543 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 20712 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-03.16:35:40.547 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.16:35:42.035 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.16:35:42.050 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-03.16:35:42.051 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-03.16:35:42.051 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-03.16:35:42.249 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-03.16:35:42.249 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1653 ms
+25-03-03.16:35:42.579 [main            ] INFO  ChatService            - ChatService init
+25-03-03.16:35:43.735 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-03.16:35:43.762 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-03.16:35:43.777 [main            ] INFO  Application            - Started Application in 3.674 seconds (JVM running for 4.225)
+25-03-03.16:35:43.783 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-03.17:38:03.188 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-03.17:38:03.188 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-03.17:38:03.188 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-03-03.17:38:03.508 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"请问有什么需要帮助的吗？","role":"system"},{"content":"感冒了怎么办(40字内回复)","role":"user"}]
+25-03-03.17:38:03.510 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.17:38:03.566 [http-nio-8091-exec-3] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-03-03.17:38:03.981 [http-nio-8091-exec-3] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-03-03.17:38:04.025 [http-nio-8091-exec-3] INFO  AbstractChatService    - 当前用户: null
+25-03-03.17:38:04.025 [http-nio-8091-exec-3] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.17:38:04.046 [http-nio-8091-exec-3] INFO  AbstractChatService    - 规则校验结果: SUCCESS
+25-03-03.17:38:04.046 [http-nio-8091-exec-3] INFO  AbstractChatService    - 开始处理请求
+25-03-03.17:38:04.095 [http-nio-8091-exec-3] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"请问有什么需要帮助的吗？"},{"role":"user","content":"感冒了怎么办(40字内回复)"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740994684047","isCompatible":true}
+25-03-03.17:38:04.120 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-03.17:38:04.121 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-03.17:38:04.121 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 299
+25-03-03.17:38:04.121 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-03.17:38:04.121 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-03.17:38:04.771 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (649ms)
+25-03-03.17:38:04.771 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Mon, 03 Mar 2025 09:38:03 GMT
+25-03-03.17:38:04.771 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-03.17:38:04.772 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=1a0c66d217409946834522781e006fee04b9ac97f7607c5bbc4f0d19625200;path=/;HttpOnly;Max-Age=1800
+25-03-03.17:38:04.772 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.17:38:04.772 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.17:38:04.772 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.17:38:04.773 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 20250303173803cfd02e943a8f49a4
+25-03-03.17:38:04.773 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.17:38:04.773 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.17:38:04.773 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.17:38:04.773 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-03.17:38:04.773 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-03.17:38:04.834 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 多
+25-03-03.17:38:04.837 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喝水
+25-03-03.17:38:04.837 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.17:38:04.891 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 休息
+25-03-03.17:38:05.025 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.17:38:05.174 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 可用
+25-03-03.17:38:05.374 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 感冒
+25-03-03.17:38:05.454 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 药
+25-03-03.17:38:05.603 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 缓解
+25-03-03.17:38:05.755 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 症状
+25-03-03.17:38:05.931 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-03.17:38:06.219 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":13,"prompt_tokens":22,"total_tokens":35}}
+25-03-03.17:38:06.227 [http-nio-8091-exec-4] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-03.17:44:44.017 [http-nio-8091-exec-2] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(40字内回复)","role":"user"},{"content":"多喝水，休息，可用感冒药缓解症状。","role":"system"},{"content":"发烧了怎么办(40字内回复)","role":"user"}]
+25-03-03.17:44:44.017 [http-nio-8091-exec-2] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.17:44:44.039 [http-nio-8091-exec-2] INFO  AbstractChatService    - 当前用户: UserAccountQuotaEntity(openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, totalQuota=10, surplusQuota=0, userAccountStatusVO=AVAILABLE, allowModelTypeList=[glm-4-flash, gpt-3.5-turbo])
+25-03-03.17:44:44.040 [http-nio-8091-exec-2] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.17:44:44.041 [http-nio-8091-exec-2] INFO  AccountStatusFilter    - 用户账户状态校验: AVAILABLE
+25-03-03.17:44:44.042 [http-nio-8091-exec-2] INFO  AbstractChatService    - 规则校验结果: SUCCESS
+25-03-03.17:44:44.042 [http-nio-8091-exec-2] INFO  AbstractChatService    - 开始处理请求
+25-03-03.17:44:44.045 [http-nio-8091-exec-2] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"感冒了怎么办(40字内回复)"},{"role":"user","content":"多喝水，休息，可用感冒药缓解症状。"},{"role":"user","content":"发烧了怎么办(40字内回复)"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740995084043","isCompatible":true}
+25-03-03.17:44:44.053 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-03.17:44:44.053 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-03.17:44:44.053 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 377
+25-03-03.17:44:44.053 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-03.17:44:44.053 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-03.17:44:44.537 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (496ms)
+25-03-03.17:44:44.537 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Mon, 03 Mar 2025 09:44:43 GMT
+25-03-03.17:44:44.537 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-03.17:44:44.537 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117409950832773636e004cecaff458b2130e8ac582ac4c440e235a;path=/;HttpOnly;Max-Age=1800
+25-03-03.17:44:44.537 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.17:44:44.537 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.17:44:44.537 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.17:44:44.537 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 20250303174443811da1db73c7493f
+25-03-03.17:44:44.537 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.17:44:44.552 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.17:44:44.552 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.17:44:44.552 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-03.17:44:44.552 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-03.17:44:44.552 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 发烧
+25-03-03.17:44:44.594 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 时
+25-03-03.17:44:44.595 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 多
+25-03-03.17:44:44.596 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喝水
+25-03-03.17:44:44.746 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.17:44:44.840 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 休息
+25-03-03.17:44:44.848 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.17:44:44.849 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 必要时
+25-03-03.17:44:44.850 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 服用
+25-03-03.17:44:44.888 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 退
+25-03-03.17:44:44.889 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 烧
+25-03-03.17:44:44.889 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 药
+25-03-03.17:44:44.891 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.17:44:44.962 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如
+25-03-03.17:44:44.962 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 症状
+25-03-03.17:44:44.968 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 严重
+25-03-03.17:44:45.031 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 应及时
+25-03-03.17:44:45.034 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 就医
+25-03-03.17:44:45.036 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-03.17:44:45.130 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":21,"prompt_tokens":38,"total_tokens":59}}
+25-03-03.17:44:45.133 [http-nio-8091-exec-8] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-03.17:48:43.721 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+25-03-03.17:48:43.725 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+25-03-03.17:48:49.323 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 21296 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-03.17:48:49.325 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.17:48:50.537 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.17:48:50.554 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-03.17:48:50.554 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-03.17:48:50.554 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-03.17:48:50.764 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-03.17:48:50.765 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1396 ms
+25-03-03.17:48:51.183 [main            ] INFO  ChatService            - ChatService init
+25-03-03.17:48:52.230 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-03.17:48:52.261 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-03.17:48:52.279 [main            ] INFO  Application            - Started Application in 3.412 seconds (JVM running for 4.007)
+25-03-03.17:48:52.284 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-03.17:59:49.500 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-03.17:59:49.500 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-03.17:59:49.508 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-03-03.17:59:49.939 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"发烧了怎么办(40字内回复)","role":"user"},{"content":"发烧时多喝水，休息，必要时服用退烧药，如症状严重应及时就医。","role":"system"},{"content":"感冒了怎么办(20字内回复)","role":"user"}]
+25-03-03.17:59:49.939 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.17:59:50.051 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-03-03.17:59:50.664 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-03-03.17:59:50.713 [http-nio-8091-exec-1] INFO  AbstractChatService    - 当前用户: UserAccountQuotaEntity(openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, totalQuota=10, surplusQuota=0, userAccountStatusVO=AVAILABLE, allowModelTypeList=[glm-4-flash, gpt-3.5-turbo])
+25-03-03.17:59:50.714 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - 访问次数限制校验: 10
+25-03-03.17:59:50.714 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.17:59:50.723 [http-nio-8091-exec-1] INFO  AccountStatusFilter    - 用户账户状态校验: AVAILABLE
+25-03-03.17:59:50.724 [http-nio-8091-exec-1] INFO  ModelTypeFilter        - 用户可用模型校验: [glm-4-flash, gpt-3.5-turbo]
+25-03-03.17:59:50.725 [http-nio-8091-exec-1] INFO  AbstractChatService    - 规则校验结果: REFUSE
+25-03-03.18:01:13.405 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+25-03-03.18:01:13.408 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+25-03-03.18:01:17.641 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 23940 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-03.18:01:17.644 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.18:01:19.021 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.18:01:19.033 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-03.18:01:19.034 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-03.18:01:19.034 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-03.18:01:19.227 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-03.18:01:19.227 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1531 ms
+25-03-03.18:01:19.670 [main            ] INFO  ChatService            - ChatService init
+25-03-03.18:01:20.864 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-03.18:01:20.884 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-03.18:01:20.900 [main            ] INFO  Application            - Started Application in 3.676 seconds (JVM running for 4.231)
+25-03-03.18:01:20.904 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-03.18:01:27.888 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-03.18:01:27.888 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-03.18:01:27.889 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-03-03.18:01:28.177 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(20字内回复)","role":"user"},{"content":"您的模型不可用, 请联系客服处理。","role":"system"},{"content":"感冒了怎么办(40字内回复)","role":"user"}]
+25-03-03.18:01:28.180 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.18:01:28.264 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-03-03.18:01:28.613 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-03-03.18:01:28.660 [http-nio-8091-exec-1] INFO  AbstractChatService    - 当前用户: UserAccountQuotaEntity(openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, totalQuota=10, surplusQuota=0, userAccountStatusVO=AVAILABLE, allowModelTypeList=[glm-4-flash, gpt-3.5-turbo])
+25-03-03.18:01:28.661 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - 访问次数限制校验: 10
+25-03-03.18:01:28.661 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.18:01:28.666 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:联系
+25-03-03.18:01:28.667 [http-nio-8091-exec-1] INFO  SensitiveWordConfig    - 敏感词:客服
+25-03-03.18:01:28.667 [http-nio-8091-exec-1] INFO  AccountStatusFilter    - 用户账户状态校验: AVAILABLE
+25-03-03.18:01:28.667 [http-nio-8091-exec-1] INFO  ModelTypeFilter        - 用户可用模型校验: [glm-4-flash, gpt-3.5-turbo] -- 当前用户模型:glm_4_flash
+25-03-03.18:01:28.667 [http-nio-8091-exec-1] INFO  AbstractChatService    - 规则校验结果: REFUSE
+25-03-03.18:02:10.816 [http-nio-8091-exec-7] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(40字内回复)","role":"user"},{"content":"您的模型不可用, 请联系客服处理。","role":"system"},{"content":"感冒了怎么办(40字内回复)","role":"user"}]
+25-03-03.18:02:10.816 [http-nio-8091-exec-7] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.18:02:10.823 [http-nio-8091-exec-7] INFO  AbstractChatService    - 当前用户: UserAccountQuotaEntity(openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, totalQuota=10, surplusQuota=0, userAccountStatusVO=AVAILABLE, allowModelTypeList=[glm_4_flash, gpt-3.5-turbo])
+25-03-03.18:02:10.823 [http-nio-8091-exec-7] INFO  AccessLimitFilter      - 访问次数限制校验: 10
+25-03-03.18:02:10.823 [http-nio-8091-exec-7] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.18:02:10.823 [http-nio-8091-exec-7] INFO  SensitiveWordConfig    - 敏感词:联系
+25-03-03.18:02:10.823 [http-nio-8091-exec-7] INFO  SensitiveWordConfig    - 敏感词:客服
+25-03-03.18:02:10.824 [http-nio-8091-exec-7] INFO  AccountStatusFilter    - 用户账户状态校验: AVAILABLE
+25-03-03.18:02:10.824 [http-nio-8091-exec-7] INFO  ModelTypeFilter        - 用户可用模型校验: [glm_4_flash, gpt-3.5-turbo] -- 当前用户模型:glm_4_flash
+25-03-03.18:02:10.824 [http-nio-8091-exec-7] INFO  UserQuotaFilter        - 用户额度校验: 10
+25-03-03.18:02:10.825 [http-nio-8091-exec-7] INFO  AbstractChatService    - 规则校验结果: REFUSE
+25-03-03.18:23:23.558 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+25-03-03.18:23:23.565 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+25-03-03.18:23:28.614 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 27848 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-03.18:23:28.617 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.18:23:29.838 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.18:23:29.847 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-03.18:23:29.847 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-03.18:23:29.847 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-03.18:23:30.038 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-03.18:23:30.039 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1376 ms
+25-03-03.18:23:30.420 [main            ] INFO  ChatService            - ChatService init
+25-03-03.18:23:31.450 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-03.18:23:31.476 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-03.18:23:31.489 [main            ] INFO  Application            - Started Application in 3.257 seconds (JVM running for 3.78)
+25-03-03.18:23:31.492 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-03.18:23:37.159 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-03.18:23:37.160 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-03.18:23:37.162 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-03-03.18:23:37.451 [http-nio-8091-exec-6] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(40字内回复)","role":"user"},{"content":"您的额度已经用完。","role":"system"},{"content":"感冒了怎么办(40字内回复)","role":"user"}]
+25-03-03.18:23:37.452 [http-nio-8091-exec-6] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.18:23:37.526 [http-nio-8091-exec-6] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-03-03.18:23:37.830 [http-nio-8091-exec-6] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-03-03.18:23:37.860 [http-nio-8091-exec-6] INFO  AbstractChatService    - 当前用户: UserAccountQuotaEntity(openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, totalQuota=10, surplusQuota=0, userAccountStatusVO=AVAILABLE, allowModelTypeList=[glm_4_flash, gpt-3.5-turbo])
+25-03-03.18:23:37.861 [http-nio-8091-exec-6] INFO  AccessLimitFilter      - 访问次数限制校验: 10
+25-03-03.18:23:37.861 [http-nio-8091-exec-6] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.18:23:37.865 [http-nio-8091-exec-6] INFO  AccountStatusFilter    - 用户账户状态校验: AVAILABLE
+25-03-03.18:23:37.866 [http-nio-8091-exec-6] INFO  ModelTypeFilter        - 用户可用模型校验: [glm_4_flash, gpt-3.5-turbo] -- 当前用户模型:glm_4_flash
+25-03-03.18:23:37.866 [http-nio-8091-exec-6] INFO  UserQuotaFilter        - 用户额度校验: 10
+25-03-03.18:23:37.866 [http-nio-8091-exec-6] INFO  AbstractChatService    - 规则校验结果: REFUSE
+25-03-03.18:24:25.594 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+25-03-03.18:24:25.598 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+25-03-03.18:24:29.502 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 28012 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-03.18:24:29.504 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.18:24:30.723 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.18:24:30.736 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-03.18:24:30.737 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-03.18:24:30.737 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-03.18:24:30.924 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-03.18:24:30.924 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1378 ms
+25-03-03.18:24:31.316 [main            ] INFO  ChatService            - ChatService init
+25-03-03.18:24:32.491 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-03.18:24:32.522 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-03.18:24:32.538 [main            ] INFO  Application            - Started Application in 3.428 seconds (JVM running for 3.939)
+25-03-03.18:24:32.543 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-03.18:24:36.500 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-03.18:24:36.500 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-03.18:24:36.501 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-03-03.18:24:36.820 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(40字内回复)","role":"user"},{"content":"您的额度已经用完。","role":"system"},{"content":"感冒了怎么办(40字内回复)","role":"user"}]
+25-03-03.18:24:36.822 [http-nio-8091-exec-1] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.18:24:36.905 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-03-03.18:24:37.278 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-03-03.18:24:37.315 [http-nio-8091-exec-1] INFO  AbstractChatService    - 当前用户: UserAccountQuotaEntity(openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, totalQuota=10, surplusQuota=0, userAccountStatusVO=AVAILABLE, allowModelTypeList=[glm_4_flash, gpt-3.5-turbo])
+25-03-03.18:24:37.315 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - 访问次数限制校验: 10
+25-03-03.18:24:37.315 [http-nio-8091-exec-1] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.18:24:37.319 [http-nio-8091-exec-1] INFO  AccountStatusFilter    - 用户账户状态校验: AVAILABLE
+25-03-03.18:24:37.320 [http-nio-8091-exec-1] INFO  ModelTypeFilter        - 用户可用模型校验: [glm_4_flash, gpt-3.5-turbo] -- 当前用户模型:glm_4_flash
+25-03-03.18:24:37.320 [http-nio-8091-exec-1] INFO  UserQuotaFilter        - 用户额度校验: 10 -- surPlus: 0
+25-03-03.18:24:37.321 [http-nio-8091-exec-1] INFO  AbstractChatService    - 规则校验结果: REFUSE
+25-03-03.18:26:38.493 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(40字内回复)","role":"user"},{"content":"您的额度已经用完。","role":"system"},{"content":"感冒了怎么办(40字内回复)","role":"user"}]
+25-03-03.18:26:38.493 [http-nio-8091-exec-3] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.18:26:38.500 [http-nio-8091-exec-3] INFO  AbstractChatService    - 当前用户: UserAccountQuotaEntity(openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, totalQuota=10, surplusQuota=1, userAccountStatusVO=AVAILABLE, allowModelTypeList=[glm_4_flash, gpt-3.5-turbo])
+25-03-03.18:26:38.500 [http-nio-8091-exec-3] INFO  AccessLimitFilter      - 访问次数限制校验: 10
+25-03-03.18:26:38.500 [http-nio-8091-exec-3] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.18:26:38.501 [http-nio-8091-exec-3] INFO  AccountStatusFilter    - 用户账户状态校验: AVAILABLE
+25-03-03.18:26:38.501 [http-nio-8091-exec-3] INFO  ModelTypeFilter        - 用户可用模型校验: [glm_4_flash, gpt-3.5-turbo] -- 当前用户模型:glm_4_flash
+25-03-03.18:26:38.501 [http-nio-8091-exec-3] INFO  UserQuotaFilter        - 用户额度校验: 10 -- surPlus: 1
+25-03-03.18:26:38.509 [http-nio-8091-exec-3] INFO  UserQuotaFilter        - 扣减额度结果: 1
+25-03-03.18:26:38.509 [http-nio-8091-exec-3] INFO  AbstractChatService    - 规则校验结果: SUCCESS
+25-03-03.18:26:38.509 [http-nio-8091-exec-3] INFO  AbstractChatService    - 开始处理请求
+25-03-03.18:26:38.550 [http-nio-8091-exec-3] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"感冒了怎么办(40字内回复)"},{"role":"user","content":"您的额度已经用完。"},{"role":"user","content":"感冒了怎么办(40字内回复)"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740997598511","isCompatible":true}
+25-03-03.18:26:38.592 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-03.18:26:38.593 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-03.18:26:38.593 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 353
+25-03-03.18:26:38.593 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-03.18:26:38.593 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-03.18:26:39.350 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (756ms)
+25-03-03.18:26:39.350 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Mon, 03 Mar 2025 10:26:38 GMT
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117409975979908050e0074e0268c67ea9a15bcb5e696ad4593e8de;path=/;HttpOnly;Max-Age=1800
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 20250303182638c9d4690728224bbf
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-03.18:26:39.351 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-03.18:26:39.398 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 多
+25-03-03.18:26:39.400 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喝水
+25-03-03.18:26:39.400 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:26:39.411 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 休息
+25-03-03.18:26:39.411 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:26:39.412 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 必要时
+25-03-03.18:26:39.413 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 就医
+25-03-03.18:26:39.534 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-03.18:26:39.775 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":10,"prompt_tokens":33,"total_tokens":43}}
+25-03-03.18:26:39.776 [http-nio-8091-exec-4] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-03.18:29:14.024 [http-nio-8091-exec-6] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"感冒了怎么办(40字内回复)","role":"user"},{"content":"多喝水，休息，必要时就医。","role":"system"},{"content":"发烧了怎么办","role":"user"}]
+25-03-03.18:29:14.024 [http-nio-8091-exec-6] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.18:29:14.031 [http-nio-8091-exec-6] INFO  AbstractChatService    - 当前用户: UserAccountQuotaEntity(openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, totalQuota=10, surplusQuota=10, userAccountStatusVO=AVAILABLE, allowModelTypeList=[glm_4_flash, gpt-3.5-turbo])
+25-03-03.18:29:14.031 [http-nio-8091-exec-6] INFO  AccessLimitFilter      - 访问次数限制校验: 10
+25-03-03.18:29:14.031 [http-nio-8091-exec-6] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.18:29:14.032 [http-nio-8091-exec-6] INFO  AccountStatusFilter    - 用户账户状态校验: AVAILABLE
+25-03-03.18:29:14.033 [http-nio-8091-exec-6] INFO  ModelTypeFilter        - 用户可用模型校验: [glm_4_flash, gpt-3.5-turbo] -- 当前用户模型:glm_4_flash
+25-03-03.18:29:14.033 [http-nio-8091-exec-6] INFO  UserQuotaFilter        - 用户额度校验: 10 -- surPlus: 10
+25-03-03.18:29:14.039 [http-nio-8091-exec-6] INFO  UserQuotaFilter        - 扣减额度结果: 1
+25-03-03.18:29:14.040 [http-nio-8091-exec-6] INFO  AbstractChatService    - 规则校验结果: SUCCESS
+25-03-03.18:29:14.040 [http-nio-8091-exec-6] INFO  AbstractChatService    - 开始处理请求
+25-03-03.18:29:14.043 [http-nio-8091-exec-6] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"感冒了怎么办(40字内回复)"},{"role":"user","content":"多喝水，休息，必要时就医。"},{"role":"user","content":"发烧了怎么办"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740997754040","isCompatible":true}
+25-03-03.18:29:14.046 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-03.18:29:14.047 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-03.18:29:14.047 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 349
+25-03-03.18:29:14.047 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-03.18:29:14.047 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (289ms)
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Mon, 03 Mar 2025 10:29:13 GMT
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117409977530665595e00744de2dad1268c2236eee7151bea31a86f;path=/;HttpOnly;Max-Age=1800
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 20250303182913e557b0bf719e45a1
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 发烧
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 时
+25-03-03.18:29:14.334 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:14.406 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 应
+25-03-03.18:29:14.407 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 多
+25-03-03.18:29:14.411 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 休息
+25-03-03.18:29:14.412 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:14.460 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 多
+25-03-03.18:29:14.460 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喝水
+25-03-03.18:29:14.473 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:14.473 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 使用
+25-03-03.18:29:14.531 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 退
+25-03-03.18:29:14.532 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 烧
+25-03-03.18:29:14.533 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 药
+25-03-03.18:29:14.533 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如
+25-03-03.18:29:14.595 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 布
+25-03-03.18:29:14.596 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 洛
+25-03-03.18:29:14.596 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 芬
+25-03-03.18:29:14.597 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-03.18:29:14.655 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 对
+25-03-03.18:29:14.656 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 乙
+25-03-03.18:29:14.657 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 酰
+25-03-03.18:29:14.658 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 氨基
+25-03-03.18:29:14.712 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 酚
+25-03-03.18:29:14.712 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:14.717 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 保持
+25-03-03.18:29:14.717 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 室内
+25-03-03.18:29:14.790 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 通风
+25-03-03.18:29:14.791 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:14.791 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 若
+25-03-03.18:29:14.792 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 持续
+25-03-03.18:29:14.850 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 高
+25-03-03.18:29:14.850 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 烧
+25-03-03.18:29:14.852 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-03.18:29:14.853 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 伴有
+25-03-03.18:29:14.911 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 其他
+25-03-03.18:29:14.912 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 症状
+25-03-03.18:29:14.913 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:14.914 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 及时
+25-03-03.18:29:14.956 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 就医
+25-03-03.18:29:14.957 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-03.18:29:15.072 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":43,"prompt_tokens":29,"total_tokens":72}}
+25-03-03.18:29:15.078 [http-nio-8091-exec-7] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-03.18:29:22.449 [http-nio-8091-exec-9] INFO  ChatGLMAIServiceController - 流式问答请求开始, 使用模型: glm_4_flash | 提示符: [{"content":"发烧了怎么办","role":"user"},{"content":"发烧时，应多休息，多喝水，使用退烧药如布洛芬或对乙酰氨基酚，保持室内通风，若持续高烧或伴有其他症状，及时就医。","role":"system"},{"content":"中暑了怎么办","role":"user"}]
+25-03-03.18:29:22.451 [http-nio-8091-exec-9] INFO  ChatGLMAIServiceController - 用户token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvOVFWRzdQUnAwa296Tl95UnZ5d181dVlfSndNIiwib3BlbklkIjoibzlRVkc3UFJwMGtvek5feVJ2eXdfNXVZX0p3TSIsImV4cCI6MTc0MTQ1MTA4OSwiaWF0IjoxNzQwODQ2Mjg5LCJqdGkiOiJjYTRmMDEwMC03MDhkLTQ4ZDktYTIyNS0zNDU2NmMzNTdlMzYifQ.VwTLYI0BfV_2FHI3TlD3rt1qK0IGB_Jc6LrJND4C21o
+25-03-03.18:29:22.459 [http-nio-8091-exec-9] INFO  AbstractChatService    - 当前用户: UserAccountQuotaEntity(openid=o9QVG7PRp0kozN_yRvyw_5uY_JwM, totalQuota=10, surplusQuota=9, userAccountStatusVO=AVAILABLE, allowModelTypeList=[glm_4_flash, gpt-3.5-turbo])
+25-03-03.18:29:22.459 [http-nio-8091-exec-9] INFO  AccessLimitFilter      - 访问次数限制校验: 10
+25-03-03.18:29:22.459 [http-nio-8091-exec-9] INFO  AccessLimitFilter      - openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM
+25-03-03.18:29:22.462 [http-nio-8091-exec-9] INFO  SensitiveWordConfig    - 敏感词:布洛芬
+25-03-03.18:29:22.462 [http-nio-8091-exec-9] INFO  SensitiveWordConfig    - 敏感词:酰
+25-03-03.18:29:22.462 [http-nio-8091-exec-9] INFO  AccountStatusFilter    - 用户账户状态校验: AVAILABLE
+25-03-03.18:29:22.462 [http-nio-8091-exec-9] INFO  ModelTypeFilter        - 用户可用模型校验: [glm_4_flash, gpt-3.5-turbo] -- 当前用户模型:glm_4_flash
+25-03-03.18:29:22.462 [http-nio-8091-exec-9] INFO  UserQuotaFilter        - 用户额度校验: 10 -- surPlus: 9
+25-03-03.18:29:22.468 [http-nio-8091-exec-9] INFO  UserQuotaFilter        - 扣减额度结果: 1
+25-03-03.18:29:22.469 [http-nio-8091-exec-9] INFO  AbstractChatService    - 规则校验结果: SUCCESS
+25-03-03.18:29:22.469 [http-nio-8091-exec-9] INFO  AbstractChatService    - 开始处理请求
+25-03-03.18:29:22.475 [http-nio-8091-exec-9] INFO  GLMExecutor            - 请求体:{"top_p":0.7,"sseFormat":"data","stream":true,"temperature":0.9,"messages":[{"role":"user","content":"发烧了怎么办"},{"role":"user","content":"发烧时，应多休息，多喝水，使用退烧药如布洛芬或对乙酰氨基酚，保持室内通风，若持续高烧或伴有其他症状，及时就医。"},{"role":"user","content":"中暑了怎么办"}],"model":"glm-4-flash","incremental":true,"request_id":"pyy-1740997762469","isCompatible":true}
+25-03-03.18:29:22.478 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+25-03-03.18:29:22.478 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+25-03-03.18:29:22.478 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 459
+25-03-03.18:29:22.478 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+25-03-03.18:29:22.478 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 https://open.bigmodel.cn/api/paas/v4/chat/completions (348ms)
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - date: Mon, 03 Mar 2025 10:29:21 GMT
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - content-type: text/event-stream;charset=UTF-8
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - set-cookie: acw_tc=ac11000117409977614975885e0074ca41f68108e58a0e83161edbb39e0bef;path=/;HttpOnly;Max-Age=1800
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - x-log-id: 2025030318292141428775d0354dc4
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Origin
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Method
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - vary: Access-Control-Request-Headers
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - strict-transport-security: max-age=31536000; includeSubDomains
+25-03-03.18:29:22.819 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP
+25-03-03.18:29:22.829 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 中
+25-03-03.18:29:22.829 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 暑
+25-03-03.18:29:22.829 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 是一种
+25-03-03.18:29:22.879 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 由于
+25-03-03.18:29:22.879 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 高温
+25-03-03.18:29:22.880 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 环境下
+25-03-03.18:29:22.881 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 体温
+25-03-03.18:29:22.942 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 调节
+25-03-03.18:29:22.944 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 功能
+25-03-03.18:29:22.945 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 紊乱
+25-03-03.18:29:22.946 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 导致的
+25-03-03.18:29:23.068 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 疾病
+25-03-03.18:29:23.207 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:23.278 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果不
+25-03-03.18:29:23.280 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 及时
+25-03-03.18:29:23.281 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 处理
+25-03-03.18:29:23.338 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:23.339 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 可能会
+25-03-03.18:29:23.340 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 发展为
+25-03-03.18:29:23.342 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 严重的
+25-03-03.18:29:23.395 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 健康
+25-03-03.18:29:23.395 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 问题
+25-03-03.18:29:23.395 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-03.18:29:23.395 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 以下
+25-03-03.18:29:23.468 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 是一些
+25-03-03.18:29:23.468 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 应对
+25-03-03.18:29:23.469 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 中
+25-03-03.18:29:23.471 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 暑
+25-03-03.18:29:23.530 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的措施
+25-03-03.18:29:23.530 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ：
+
+1
+25-03-03.18:29:23.530 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] .
+25-03-03.18:29:23.591 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  立
+25-03-03.18:29:23.591 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 即
+25-03-03.18:29:23.683 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 转移到
+25-03-03.18:29:23.684 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 阴
+25-03-03.18:29:23.686 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 凉
+25-03-03.18:29:23.690 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 处
+25-03-03.18:29:23.777 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ：
+25-03-03.18:29:23.777 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 将
+25-03-03.18:29:23.777 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 中
+25-03-03.18:29:23.777 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 暑
+25-03-03.18:29:23.918 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 者
+25-03-03.18:29:24.002 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 移
+25-03-03.18:29:24.003 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 至
+25-03-03.18:29:24.004 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 阴
+25-03-03.18:29:24.004 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 凉
+25-03-03.18:29:24.081 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-03.18:29:24.082 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 空调
+25-03-03.18:29:24.083 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 房间
+25-03-03.18:29:24.083 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:24.205 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 避免
+25-03-03.18:29:24.334 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 继续
+25-03-03.18:29:24.463 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 暴露
+25-03-03.18:29:24.629 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 在
+25-03-03.18:29:24.834 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 高温
+25-03-03.18:29:24.835 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 环境中
+25-03-03.18:29:24.835 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+
+2
+25-03-03.18:29:24.928 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] .
+25-03-03.18:29:25.030 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  补
+25-03-03.18:29:25.031 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 充
+25-03-03.18:29:25.031 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 水分
+25-03-03.18:29:25.062 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ：
+25-03-03.18:29:25.064 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 给予
+25-03-03.18:29:25.064 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 中
+25-03-03.18:29:25.066 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 暑
+25-03-03.18:29:25.124 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 者
+25-03-03.18:29:25.125 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喝
+25-03-03.18:29:25.125 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 淡
+25-03-03.18:29:25.126 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 盐水
+25-03-03.18:29:25.185 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-03.18:29:25.186 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 清凉
+25-03-03.18:29:25.187 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 饮料
+25-03-03.18:29:25.187 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:25.247 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 以
+25-03-03.18:29:25.247 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 补充
+25-03-03.18:29:25.247 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 因
+25-03-03.18:29:25.247 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 出汗
+25-03-03.18:29:25.372 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 而
+25-03-03.18:29:25.505 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 流失
+25-03-03.18:29:25.597 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 的水
+25-03-03.18:29:25.598 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 分
+25-03-03.18:29:25.599 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 和
+25-03-03.18:29:25.599 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 电解
+25-03-03.18:29:25.659 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 质
+25-03-03.18:29:25.660 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+
+3
+25-03-03.18:29:25.665 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] .
+25-03-03.18:29:25.783 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  
+25-03-03.18:29:25.919 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 降温
+25-03-03.18:29:26.055 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 措施
+25-03-03.18:29:26.131 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ：
+  
+25-03-03.18:29:26.131 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  -
+25-03-03.18:29:26.131 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  用
+25-03-03.18:29:26.193 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 温水
+25-03-03.18:29:26.194 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 擦拭
+25-03-03.18:29:26.194 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 身体
+25-03-03.18:29:26.194 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:26.321 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 特别是
+25-03-03.18:29:26.412 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 腋
+25-03-03.18:29:26.413 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 下
+25-03-03.18:29:26.413 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 、
+25-03-03.18:29:26.413 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 颈部
+25-03-03.18:29:26.476 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 、
+25-03-03.18:29:26.476 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 手臂
+25-03-03.18:29:26.477 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 和
+25-03-03.18:29:26.477 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 腿部
+25-03-03.18:29:26.604 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 等
+25-03-03.18:29:26.763 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 大
+25-03-03.18:29:26.767 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 血管
+25-03-03.18:29:26.768 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 丰富的
+25-03-03.18:29:26.769 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 区域
+25-03-03.18:29:26.893 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:27.022 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助
+25-03-03.18:29:27.116 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 身体
+25-03-03.18:29:27.117 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 散热
+25-03-03.18:29:27.117 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+  
+25-03-03.18:29:27.235 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  -
+25-03-03.18:29:27.355 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  如果
+25-03-03.18:29:27.357 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 可能
+25-03-03.18:29:27.357 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:27.357 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 用
+25-03-03.18:29:27.419 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 风扇
+25-03-03.18:29:27.420 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 吹
+25-03-03.18:29:27.421 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 拂
+25-03-03.18:29:27.421 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 身体
+25-03-03.18:29:27.470 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:27.471 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 增加
+25-03-03.18:29:27.471 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 空气
+25-03-03.18:29:27.531 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 流动
+25-03-03.18:29:27.531 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 以
+25-03-03.18:29:27.531 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 加速
+25-03-03.18:29:27.531 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 散热
+25-03-03.18:29:27.713 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+  
+25-03-03.18:29:27.713 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  -
+25-03-03.18:29:27.713 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  如果
+25-03-03.18:29:27.845 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 情况
+25-03-03.18:29:27.990 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 允许
+25-03-03.18:29:28.109 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:28.238 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 可以
+25-03-03.18:29:28.395 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 给
+25-03-03.18:29:28.395 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 患者
+25-03-03.18:29:28.395 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 脱
+25-03-03.18:29:28.395 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 去
+25-03-03.18:29:28.468 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 多余的
+25-03-03.18:29:28.468 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 衣物
+25-03-03.18:29:28.468 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:28.469 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 以
+25-03-03.18:29:28.565 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 利于
+25-03-03.18:29:28.565 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 散热
+25-03-03.18:29:28.565 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+
+4
+25-03-03.18:29:28.642 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] .
+25-03-03.18:29:28.724 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  脱
+25-03-03.18:29:28.724 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 鞋
+25-03-03.18:29:28.724 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 袜
+25-03-03.18:29:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ：
+25-03-03.18:29:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果
+25-03-03.18:29:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 患者
+25-03-03.18:29:28.801 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 穿着
+25-03-03.18:29:28.977 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 鞋
+25-03-03.18:29:28.978 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 袜
+25-03-03.18:29:28.979 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:28.979 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 应
+25-03-03.18:29:29.018 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 脱
+25-03-03.18:29:29.020 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 去
+25-03-03.18:29:29.020 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 它们
+25-03-03.18:29:29.084 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:29.084 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 以
+25-03-03.18:29:29.084 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 促进
+25-03-03.18:29:29.084 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 热量
+25-03-03.18:29:29.162 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 散发
+25-03-03.18:29:29.162 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+
+5
+25-03-03.18:29:29.163 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] .
+25-03-03.18:29:29.210 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  监
+25-03-03.18:29:29.210 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 测
+25-03-03.18:29:29.210 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 体温
+25-03-03.18:29:29.288 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ：
+25-03-03.18:29:29.288 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 定期
+25-03-03.18:29:29.288 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 监测
+25-03-03.18:29:29.288 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 体温
+25-03-03.18:29:29.416 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:29.588 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果
+25-03-03.18:29:29.588 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 体温
+25-03-03.18:29:29.588 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 下降
+25-03-03.18:29:29.588 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:29.651 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 可以
+25-03-03.18:29:29.651 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 继续
+25-03-03.18:29:29.651 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 上述
+25-03-03.18:29:29.651 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 措施
+25-03-03.18:29:29.698 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ；
+25-03-03.18:29:29.698 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果
+25-03-03.18:29:29.714 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 体温
+25-03-03.18:29:29.718 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 持续
+25-03-03.18:29:29.847 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 升高
+25-03-03.18:29:29.967 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:30.094 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 应
+25-03-03.18:29:30.237 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 立即
+25-03-03.18:29:30.378 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 就医
+25-03-03.18:29:30.457 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+
+6
+25-03-03.18:29:30.457 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] .
+25-03-03.18:29:30.457 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  保持
+25-03-03.18:29:30.529 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 呼吸道
+25-03-03.18:29:30.529 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 通畅
+25-03-03.18:29:30.531 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ：
+25-03-03.18:29:30.531 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果
+25-03-03.18:29:30.592 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 患者
+25-03-03.18:29:30.594 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 意识
+25-03-03.18:29:30.596 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 模糊
+25-03-03.18:29:30.596 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-03.18:29:30.675 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 呼吸困难
+25-03-03.18:29:30.675 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:30.675 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 应
+25-03-03.18:29:30.679 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 将其
+25-03-03.18:29:30.728 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 头部
+25-03-03.18:29:30.728 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 偏向
+25-03-03.18:29:30.728 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 一侧
+25-03-03.18:29:30.728 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:30.837 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 以防
+25-03-03.18:29:30.837 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 呕吐
+25-03-03.18:29:30.837 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 物
+25-03-03.18:29:30.837 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 窒息
+25-03-03.18:29:30.916 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+
+7
+25-03-03.18:29:30.916 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] .
+25-03-03.18:29:30.916 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  联
+25-03-03.18:29:30.932 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 系
+25-03-03.18:29:30.932 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 急救
+25-03-03.18:29:31.122 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ：
+25-03-03.18:29:31.122 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果
+25-03-03.18:29:31.122 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 中
+25-03-03.18:29:31.122 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 暑
+25-03-03.18:29:31.233 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 症状
+25-03-03.18:29:31.233 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 严重
+25-03-03.18:29:31.233 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:31.233 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如
+25-03-03.18:29:31.297 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 意识
+25-03-03.18:29:31.297 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 丧失
+25-03-03.18:29:31.297 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 、
+25-03-03.18:29:31.297 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 高
+25-03-03.18:29:31.361 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 烧
+25-03-03.18:29:31.361 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 、
+25-03-03.18:29:31.361 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 抽
+25-03-03.18:29:31.424 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 搐
+25-03-03.18:29:31.424 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 等
+25-03-03.18:29:31.424 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:31.473 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 应
+25-03-03.18:29:31.473 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 立即
+25-03-03.18:29:31.488 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 拨打
+25-03-03.18:29:31.488 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 急救
+25-03-03.18:29:31.550 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 电话
+25-03-03.18:29:31.550 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+
+8
+25-03-03.18:29:31.550 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] .
+25-03-03.18:29:31.600 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:]  避
+25-03-03.18:29:31.600 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 免
+25-03-03.18:29:31.668 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 给
+25-03-03.18:29:31.670 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 患者
+25-03-03.18:29:31.670 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喂
+25-03-03.18:29:31.670 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 食
+25-03-03.18:29:31.711 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ：
+25-03-03.18:29:31.711 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 在
+25-03-03.18:29:31.711 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 恢复
+25-03-03.18:29:31.774 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 意识
+25-03-03.18:29:31.774 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 之前
+25-03-03.18:29:31.774 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:31.774 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 不要
+25-03-03.18:29:31.834 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 给
+25-03-03.18:29:31.834 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 患者
+25-03-03.18:29:31.834 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 喂
+25-03-03.18:29:31.834 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 食
+25-03-03.18:29:31.883 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:31.883 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 以免
+25-03-03.18:29:31.883 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 引起
+25-03-03.18:29:31.945 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 窒息
+25-03-03.18:29:31.945 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+
+请
+25-03-03.18:29:31.945 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 记住
+25-03-03.18:29:32.024 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:32.024 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 中
+25-03-03.18:29:32.024 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 暑
+25-03-03.18:29:32.024 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 是一种
+25-03-03.18:29:32.089 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 紧急
+25-03-03.18:29:32.089 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 情况
+25-03-03.18:29:32.089 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:32.089 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 如果
+25-03-03.18:29:32.216 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 症状
+25-03-03.18:29:32.380 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 严重
+25-03-03.18:29:32.380 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 或
+25-03-03.18:29:32.380 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 持续
+25-03-03.18:29:32.380 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 不
+25-03-03.18:29:32.434 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 退
+25-03-03.18:29:32.440 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] ，
+25-03-03.18:29:32.440 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 应
+25-03-03.18:29:32.441 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 立即
+25-03-03.18:29:32.533 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 寻求
+25-03-03.18:29:32.533 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 医疗
+25-03-03.18:29:32.533 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 帮助
+25-03-03.18:29:32.533 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出消息增量:] 。
+25-03-03.18:29:32.672 [OkHttp https://open.bigmodel.cn/...] INFO  ChatGLMService         - [输出结束] Tokens {"usage":{"completion_tokens":318,"prompt_tokens":57,"total_tokens":375}}
+25-03-03.18:29:32.681 [http-nio-8091-exec-8] INFO  AbstractChatService    - 流式问答请求完成，使用模型：glm_4_flash
+25-03-03.18:30:28.996 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+25-03-03.18:30:29.007 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+25-03-03.18:30:31.568 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 23068 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-03.18:30:31.570 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-03.18:30:32.729 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-03.18:30:32.849 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1221 ms
+25-03-03.18:30:33.218 [main            ] INFO  ChatService            - ChatService init
+25-03-03.18:30:34.364 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-03.18:30:34.380 [main            ] INFO  Application            - Started Application in 3.206 seconds (JVM running for 3.72)
+25-03-03.18:30:34.385 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤

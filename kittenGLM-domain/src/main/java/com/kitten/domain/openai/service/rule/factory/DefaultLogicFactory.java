@@ -38,8 +38,12 @@ public class DefaultLogicFactory {
      */
     public enum LogicModel {
 
+        NULL("NULL", "放行, 无过滤"),
         ACCESS_LIMIT("ACCESS_LIMIT", "访问次数过滤"),
         SENSITIVE_WORD("SENSITIVE_WORD", "敏感词过滤"),
+        USER_QUOTA("USER_QUOTA", "用户额度过滤"),
+        MODEL_TYPE("MODEL_TYPE", "模型类型(可用范围)过滤"),
+        ACCOUNT_STATUS("ACCOUNT_STATUS", "用户账户状态过滤"),
         ;
 
         private String code;
