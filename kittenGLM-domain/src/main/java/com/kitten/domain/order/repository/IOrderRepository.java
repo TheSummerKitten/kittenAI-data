@@ -39,4 +39,10 @@ public interface IOrderRepository {
      * @param orderId
      */
     void changeOrderPaySuccess(String orderId);
+
+    /**
+     * 发货
+     * @param orderId
+     */
+    void deliverGoods(String orderId);
 }

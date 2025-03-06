@@ -15,4 +15,10 @@ public interface IOpenAIOrderDao {
     void updateOrderPayInfo(OpenAIOrderPO po);
     // 更新订单支付状态为成功
     void changeOrderPaySuccess(String orderId);
+
+    // 根据订单号查询订单
+    OpenAIOrderPO queryOrder(String orderId);
+
+    // 更新订单状态为已发货
+    int updateOrderStatusDeliverd(String orderId);
 }
