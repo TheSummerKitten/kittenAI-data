@@ -161,3 +161,28 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" bec
 25-03-06.23:21:44.629 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
 25-03-06.23:21:44.641 [main            ] INFO  Application            - Started Application in 4.138 seconds (JVM running for 4.971)
 25-03-06.23:21:44.643 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-06.23:23:37.585 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 616 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-06.23:23:37.588 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-06.23:23:39.118 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-06.23:23:39.129 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-06.23:23:39.130 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-06.23:23:39.130 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-06.23:23:39.309 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-06.23:23:39.310 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1654 ms
+25-03-06.23:23:39.655 [main            ] INFO  ChatService            - ChatService init
+25-03-06.23:23:41.161 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-06.23:23:41.191 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-06.23:23:41.210 [main            ] INFO  Application            - Started Application in 4.275 seconds (JVM running for 5.129)
+25-03-06.23:23:41.214 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-06.23:24:10.268 [http-nio-8091-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-06.23:24:10.268 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-06.23:24:10.270 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-03-06.23:24:10.405 [http-nio-8091-exec-2] INFO  SaleController         - token校验结果:true
+25-03-06.23:24:10.455 [http-nio-8091-exec-2] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-03-06.23:24:10.811 [http-nio-8091-exec-2] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-03-06.23:24:11.001 [http-nio-8091-exec-3] INFO  SaleController         - token校验结果:true
+25-03-06.23:24:18.305 [http-nio-8091-exec-1] INFO  SaleController         - 校验结果:true
+25-03-06.23:24:19.335 [http-nio-8091-exec-1] INFO  SaleController         - 用户openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM , 下单商品productId:1002
+25-03-06.23:24:19.352 [http-nio-8091-exec-1] INFO  OrderRepository        - queryProductByProductId: OpenAIProductPO(id=null, productId=1002, productName=OpenAi 测试商品(glm_4_flash), productDesc=测试商品请勿下单, quota=200, price=0.02, sort=null, isEnabled=1, createTime=null, updateTime=null)
+25-03-06.23:24:19.978 [http-nio-8091-exec-1] INFO  AbstractOrderService   - 创建订单 - 完成，支付单：o9QVG7PRp0kozN_yRvyw_5uY_JwM，orderId：653626170748
+25-03-06.23:24:19.978 [http-nio-8091-exec-1] INFO  SaleController         - 用户商品下单, openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM, productId:1002, orderId:653626170748 
