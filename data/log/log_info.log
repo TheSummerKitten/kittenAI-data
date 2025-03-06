@@ -135,3 +135,29 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" bec
 25-03-06.23:08:49.489 [http-nio-8091-exec-3] INFO  OrderRepository        - queryProductByProductId: OpenAIProductPO(id=null, productId=1002, productName=OpenAi 测试商品(glm_4_flash), productDesc=测试商品请勿下单, quota=200, price=0.02, sort=null, isEnabled=1, createTime=null, updateTime=null)
 25-03-06.23:08:49.823 [http-nio-8091-exec-3] INFO  AbstractOrderService   - 创建订单 - 完成，支付单：o9QVG7PRp0kozN_yRvyw_5uY_JwM，orderId：100694044029
 25-03-06.23:08:49.823 [http-nio-8091-exec-3] INFO  SaleController         - 用户商品下单, openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM, productId:1002, orderId:100694044029 
+25-03-06.23:15:25.345 [http-nio-8091-exec-7] INFO  SaleController         - token校验结果:true
+25-03-06.23:15:25.370 [http-nio-8091-exec-8] INFO  SaleController         - token校验结果:true
+25-03-06.23:15:37.058 [http-nio-8091-exec-9] INFO  SaleController         - 校验结果:true
+25-03-06.23:15:37.060 [http-nio-8091-exec-9] INFO  SaleController         - 用户openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM , 下单商品productId:1002
+25-03-06.23:15:37.070 [http-nio-8091-exec-9] INFO  OrderRepository        - queryProductByProductId: OpenAIProductPO(id=null, productId=1002, productName=OpenAi 测试商品(glm_4_flash), productDesc=测试商品请勿下单, quota=200, price=0.02, sort=null, isEnabled=1, createTime=null, updateTime=null)
+25-03-06.23:15:37.129 [http-nio-8091-exec-9] INFO  AbstractOrderService   - 创建订单 - 完成，支付单：o9QVG7PRp0kozN_yRvyw_5uY_JwM，orderId：839905409134
+25-03-06.23:15:37.129 [http-nio-8091-exec-9] INFO  SaleController         - 用户商品下单, openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM, productId:1002, orderId:839905409134 
+25-03-06.23:18:53.253 [http-nio-8091-exec-1] INFO  SaleController         - token校验结果:true
+25-03-06.23:18:53.272 [http-nio-8091-exec-2] INFO  SaleController         - token校验结果:true
+25-03-06.23:19:03.753 [http-nio-8091-exec-3] INFO  SaleController         - token校验结果:true
+25-03-06.23:19:03.762 [http-nio-8091-exec-4] INFO  SaleController         - token校验结果:true
+25-03-06.23:19:04.838 [http-nio-8091-exec-6] INFO  SaleController         - 校验结果:true
+25-03-06.23:19:04.842 [http-nio-8091-exec-6] INFO  SaleController         - 用户openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM , 下单商品productId:1002
+25-03-06.23:19:04.851 [http-nio-8091-exec-6] INFO  OrderRepository        - queryProductByProductId: OpenAIProductPO(id=null, productId=1002, productName=OpenAi 测试商品(glm_4_flash), productDesc=测试商品请勿下单, quota=200, price=0.02, sort=null, isEnabled=1, createTime=null, updateTime=null)
+25-03-06.23:19:04.901 [http-nio-8091-exec-6] INFO  AbstractOrderService   - 创建订单 - 完成，支付单：o9QVG7PRp0kozN_yRvyw_5uY_JwM，orderId：724608927385
+25-03-06.23:19:04.902 [http-nio-8091-exec-6] INFO  SaleController         - 用户商品下单, openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM, productId:1002, orderId:724608927385 
+25-03-06.23:21:36.660 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+25-03-06.23:21:36.671 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+25-03-06.23:21:41.086 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 13396 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-06.23:21:41.088 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-06.23:21:42.540 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-06.23:21:42.727 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1575 ms
+25-03-06.23:21:43.086 [main            ] INFO  ChatService            - ChatService init
+25-03-06.23:21:44.629 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-06.23:21:44.641 [main            ] INFO  Application            - Started Application in 4.138 seconds (JVM running for 4.971)
+25-03-06.23:21:44.643 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
