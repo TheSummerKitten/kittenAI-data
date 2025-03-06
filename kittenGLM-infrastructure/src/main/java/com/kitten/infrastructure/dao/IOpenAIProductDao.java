@@ -10,4 +10,8 @@ public interface IOpenAIProductDao {
 
 
     List<OpenAIProductPO> queryProductList();
+
+    OpenAIProductPO queryProductByProductId(String productId);
+
+
 }

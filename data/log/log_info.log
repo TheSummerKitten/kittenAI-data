@@ -1,68 +1,137 @@
-25-03-05.15:54:45.410 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 4628 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-05.15:54:45.413 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-05.15:54:47.298 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-05.15:54:47.321 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-05.15:54:47.322 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-05.15:54:47.322 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-05.15:54:47.494 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-05.15:54:47.494 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2018 ms
-25-03-05.15:54:48.031 [main            ] INFO  ChatService            - ChatService init
-25-03-05.15:54:49.305 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-05.15:54:49.328 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-05.15:54:49.340 [main            ] INFO  Application            - Started Application in 4.507 seconds (JVM running for 6.233)
-25-03-05.15:54:49.344 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-05.15:55:26.671 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-05.15:55:26.671 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-05.15:55:26.671 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
-25-03-05.15:56:18.776 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 7220 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-05.15:56:18.778 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-05.15:56:20.099 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-05.15:56:20.112 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-05.15:56:20.112 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-05.15:56:20.113 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-05.15:56:20.274 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-05.15:56:20.274 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1456 ms
-25-03-05.15:56:20.647 [main            ] INFO  ChatService            - ChatService init
-25-03-05.15:56:21.797 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-05.15:56:21.815 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-05.15:56:21.825 [main            ] INFO  Application            - Started Application in 3.589 seconds (JVM running for 4.131)
-25-03-05.15:56:21.831 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-05.15:56:31.131 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-05.15:56:31.131 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-05.15:56:31.133 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
-25-03-05.15:56:31.268 [http-nio-8091-exec-9] INFO  SaleController         - 校验结果:true
-25-03-05.15:56:31.297 [http-nio-8091-exec-9] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-25-03-05.15:56:31.523 [http-nio-8091-exec-9] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-25-03-05.15:56:31.590 [http-nio-8091-exec-5] INFO  SaleController         - 校验结果:true
-25-03-05.16:18:06.583 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
-25-03-05.16:18:06.586 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
-25-03-05.16:18:10.810 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 23216 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
-25-03-05.16:18:10.812 [main            ] INFO  Application            - The following 1 profile is active: "dev"
-25-03-05.16:18:12.179 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
-25-03-05.16:18:12.193 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
-25-03-05.16:18:12.194 [main            ] INFO  StandardService        - Starting service [Tomcat]
-25-03-05.16:18:12.194 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
-25-03-05.16:18:12.340 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
-25-03-05.16:18:12.340 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1480 ms
-25-03-05.16:18:12.703 [main            ] INFO  ChatService            - ChatService init
-25-03-05.16:18:13.715 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
-25-03-05.16:18:13.739 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
-25-03-05.16:18:13.753 [main            ] INFO  Application            - Started Application in 3.356 seconds (JVM running for 3.885)
-25-03-05.16:18:13.758 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
-25-03-05.16:21:11.939 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
-25-03-05.16:21:11.943 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
-25-03-05.16:21:11.948 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
-25-03-05.16:21:12.097 [http-nio-8091-exec-1] INFO  SaleController         - 校验结果:true
-25-03-05.16:21:12.124 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
-25-03-05.16:21:12.518 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
-25-03-05.16:21:12.671 [http-nio-8091-exec-2] INFO  SaleController         - 校验结果:true
-25-03-05.16:21:38.090 [http-nio-8091-exec-3] INFO  SaleController         - 校验结果:true
-25-03-05.16:21:38.102 [http-nio-8091-exec-8] INFO  SaleController         - 校验结果:true
-25-03-05.16:22:38.812 [http-nio-8091-exec-7] INFO  SaleController         - 校验结果:true
-25-03-05.16:22:38.822 [http-nio-8091-exec-9] INFO  SaleController         - 校验结果:true
-25-03-05.16:23:12.369 [http-nio-8091-exec-4] INFO  SaleController         - 校验结果:true
-25-03-05.16:23:12.379 [http-nio-8091-exec-10] INFO  SaleController         - 校验结果:true
-25-03-05.16:24:07.507 [http-nio-8091-exec-1] INFO  SaleController         - 校验结果:true
-25-03-05.16:24:07.518 [http-nio-8091-exec-2] INFO  SaleController         - 校验结果:true
-25-03-05.16:24:12.352 [http-nio-8091-exec-3] INFO  SaleController         - 校验结果:true
-25-03-05.16:24:12.362 [http-nio-8091-exec-8] INFO  SaleController         - 校验结果:true
+25-03-06.22:58:53.704 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 33752 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-06.22:58:53.706 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-06.22:58:54.784 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-06.22:58:54.796 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-06.22:58:54.798 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-06.22:58:54.799 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-06.22:58:54.940 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-06.22:58:54.940 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1183 ms
+25-03-06.22:58:55.243 [main            ] INFO  ChatService            - ChatService init
+25-03-06.22:58:56.347 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-06.22:58:56.378 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-06.22:58:56.394 [main            ] INFO  Application            - Started Application in 3.137 seconds (JVM running for 4.746)
+25-03-06.22:58:56.398 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-06.22:59:22.752 [http-nio-8091-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-06.22:59:22.752 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-06.22:59:22.755 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 3 ms
+25-03-06.22:59:23.082 [http-nio-8091-exec-4] INFO  SaleController         - 校验结果:true
+25-03-06.22:59:23.158 [http-nio-8091-exec-4] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-03-06.22:59:24.107 [http-nio-8091-exec-4] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-03-06.22:59:24.255 [http-nio-8091-exec-6] INFO  SaleController         - 校验结果:true
+25-03-06.22:59:55.631 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+25-03-06.22:59:55.641 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+25-03-06.23:00:00.154 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 24536 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-06.23:00:00.158 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-06.23:00:01.379 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-06.23:00:01.388 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-06.23:00:01.389 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-06.23:00:01.389 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-06.23:00:01.571 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-06.23:00:01.571 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1354 ms
+25-03-06.23:00:01.894 [main            ] INFO  ChatService            - ChatService init
+25-03-06.23:00:02.986 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-06.23:00:03.005 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-06.23:00:03.017 [main            ] INFO  Application            - Started Application in 3.281 seconds (JVM running for 3.819)
+25-03-06.23:00:03.020 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-06.23:00:16.645 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-06.23:00:16.645 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-06.23:00:16.646 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-03-06.23:00:16.830 [http-nio-8091-exec-1] INFO  SaleController         - token校验结果:true
+25-03-06.23:00:16.891 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-03-06.23:00:17.231 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-03-06.23:00:17.405 [http-nio-8091-exec-2] INFO  SaleController         - token校验结果:true
+25-03-06.23:01:31.716 [http-nio-8091-exec-3] INFO  SaleController         - 校验结果:true
+25-03-06.23:01:32.023 [http-nio-8091-exec-3] INFO  SaleController         - 用户openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM , 下单商品productId:1002
+25-03-06.23:01:32.041 [http-nio-8091-exec-3] ERROR SaleController         - 下单失败
+java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "code" is null
+	at com.kitten.dataTypes.enums.OpenAIProductEnableModel.get(OpenAIProductEnableModel.java:18)
+	at com.kitten.infrastructure.repository.OrderRepository.queryProduct(OrderRepository.java:92)
+	at com.kitten.infrastructure.repository.OrderRepository$$FastClassBySpringCGLIB$$c4f57ec5.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.kitten.infrastructure.repository.OrderRepository$$EnhancerBySpringCGLIB$$fd386fad.queryProduct(<generated>)
+	at com.kitten.domain.order.service.AbstractOrderService.createOrder(AbstractOrderService.java:42)
+	at com.kitten.trigger.http.SaleController.createPayOrder(SaleController.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+25-03-06.23:08:11.977 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown initiated...
+25-03-06.23:08:11.986 [SpringApplicationShutdownHook] INFO  HikariDataSource       - Retail_HikariCP - Shutdown completed.
+25-03-06.23:08:18.993 [main            ] INFO  Application            - Starting Application using Java 17.0.12 on LAPTOP-FC1VQ3PG with PID 23712 (D:\OpenAI\Server\kittenChat-data\kittenGLM-app\target\classes started by kitten in D:\OpenAI\Server\kittenChat-data)
+25-03-06.23:08:18.996 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+25-03-06.23:08:20.457 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-03-06.23:08:20.468 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-03-06.23:08:20.469 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-03-06.23:08:20.469 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-03-06.23:08:20.650 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-03-06.23:08:20.650 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1588 ms
+25-03-06.23:08:21.022 [main            ] INFO  ChatService            - ChatService init
+25-03-06.23:08:22.315 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-03-06.23:08:22.344 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-03-06.23:08:22.358 [main            ] INFO  Application            - Started Application in 4.048 seconds (JVM running for 4.878)
+25-03-06.23:08:22.361 [main            ] INFO  Application            - ❤❤❤ChatGLM-App 启动成功❤❤❤
+25-03-06.23:08:40.380 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-03-06.23:08:40.380 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-03-06.23:08:40.382 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 2 ms
+25-03-06.23:08:40.527 [http-nio-8091-exec-1] INFO  SaleController         - token校验结果:true
+25-03-06.23:08:40.573 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+25-03-06.23:08:40.917 [http-nio-8091-exec-1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+25-03-06.23:08:41.112 [http-nio-8091-exec-2] INFO  SaleController         - token校验结果:true
+25-03-06.23:08:49.057 [http-nio-8091-exec-3] INFO  SaleController         - 校验结果:true
+25-03-06.23:08:49.477 [http-nio-8091-exec-3] INFO  SaleController         - 用户openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM , 下单商品productId:1002
+25-03-06.23:08:49.489 [http-nio-8091-exec-3] INFO  OrderRepository        - queryProductByProductId: OpenAIProductPO(id=null, productId=1002, productName=OpenAi 测试商品(glm_4_flash), productDesc=测试商品请勿下单, quota=200, price=0.02, sort=null, isEnabled=1, createTime=null, updateTime=null)
+25-03-06.23:08:49.823 [http-nio-8091-exec-3] INFO  AbstractOrderService   - 创建订单 - 完成，支付单：o9QVG7PRp0kozN_yRvyw_5uY_JwM，orderId：100694044029
+25-03-06.23:08:49.823 [http-nio-8091-exec-3] INFO  SaleController         - 用户商品下单, openid:o9QVG7PRp0kozN_yRvyw_5uY_JwM, productId:1002, orderId:100694044029 

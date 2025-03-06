@@ -6,19 +6,28 @@
         <id column="id" property="id"/>
         <result column="product_id" property="productId"/>
         <result column="product_name" property="productName"/>
-        <result column="product_description" property="productDescription"/>
+        <result column="product_desc" property="productDesc"/>
+        <result column="quota" property="quota"/>
         <result column="price" property="price"/>
-        <result column="model_types" property="modelTypes"/>
-        <result column="status" property="status"/>
+        <result column="sort" property="sort"/>
+        <result column="is_enabled" property="isEnabled"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
 
-
+    <!--  查询产品列表 -->
     <select id="queryProductList"  resultMap="openAIProductMap">
         select id, product_id, product_name, product_desc, quota, price
         from openai.openai_product
         where is_enabled = 1
         order by sort
     </select>
+<!--  根据productId查询产品信息  -->
+    <select id="queryProductByProductId" resultMap="openAIProductMap" parameterType="java.lang.String">
+        select product_id, product_name, product_desc, quota, price, is_enabled
+        from openai.openai_product
+        where product_id = #{productId}
+    </select>
+
+
 </mapper>
