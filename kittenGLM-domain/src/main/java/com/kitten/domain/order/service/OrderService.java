@@ -12,6 +12,7 @@ import com.kitten.domain.order.model.entity.ShopCartEntity;
 import com.kitten.domain.order.model.valobj.OrderStatusVO;
 import com.kitten.domain.order.model.valobj.PayStatusVO;
 import com.kitten.domain.order.model.valobj.PayTypeVO;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+@Slf4j
 @Service
 public class OrderService extends AbstractOrderService{
 
@@ -109,8 +111,14 @@ public class OrderService extends AbstractOrderService{
         orderRepository.changeOrderPaySuccess(orderId);
     }
 
-
-
+    /**
+     * 发货
+     * @param orderId
+     */
+    @Override
+    public void deliverGoods(String orderId) {
+        orderRepository.deliverGoods(orderId);
+    }
 
 
 }

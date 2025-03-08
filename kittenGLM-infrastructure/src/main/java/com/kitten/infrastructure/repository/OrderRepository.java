@@ -7,10 +7,15 @@ import com.kitten.domain.order.model.valobj.PayStatusVO;
 import com.kitten.domain.order.repository.IOrderRepository;
 import com.kitten.infrastructure.dao.IOpenAIOrderDao;
 import com.kitten.infrastructure.dao.IOpenAIProductDao;
+import com.kitten.infrastructure.dao.IUserAccountDao;
 import com.kitten.infrastructure.po.OpenAIOrderPO;
 import com.kitten.infrastructure.po.OpenAIProductPO;
+import com.kitten.infrastructure.po.UserAccountPO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 
 import javax.annotation.Resource;
@@ -26,6 +31,8 @@ public class OrderRepository implements IOrderRepository {
 
     @Resource
     private IOpenAIOrderDao openAIOrderDao;
+    @Resource
+    private IUserAccountDao userAccountDao;
 
     /**
      * 商品查询
@@ -137,4 +144,41 @@ public class OrderRepository implements IOrderRepository {
     public void changeOrderPaySuccess(String orderId) {
         openAIOrderDao.changeOrderPaySuccess(orderId);
     }
+
+    /**
+     * 发货
+     * @param orderId
+     */
+    @Override
+    @Transactional(rollbackFor = Exception.class, timeout = 600, propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
+    public void deliverGoods(String orderId) {
+        // 查询订单实体
+        OpenAIOrderPO po = openAIOrderDao.queryOrder(orderId);
+        // 1.更新订单状态为已发货
+        int updateCount = openAIOrderDao.updateOrderStatusDeliverd(orderId);
+        if (updateCount != 1) {
+            throw new RuntimeException("订单状态更新失败: 发货状态更新失败 in deliverGoods");
+        }
+
+
+        // 2.账户额度变更
+        UserAccountPO userAccountPO = userAccountDao.queryUserAccount(po.getOpenid());
+        UserAccountPO userAccountPOReq = new UserAccountPO();
+        userAccountPOReq.setOpenid(po.getOpenid());
+        userAccountPOReq.setTotalQuota(po.getProductQuota());
+        userAccountPOReq.setSurplusQuota(po.getProductQuota());
+        if (null != userAccountPO) {
+            int addAccountQuota = userAccountDao.addAccountQuota(userAccountPOReq);
+            if (addAccountQuota != 1) {
+                throw new RuntimeException("账户额度变更失败: 增加账户额度失败 in deliverGoods");
+            }
+        } else {
+            userAccountDao.insert(userAccountPOReq);
+        }
+    }
+
+
+
+
+
 }
